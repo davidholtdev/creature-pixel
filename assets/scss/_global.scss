@@ -18,3 +18,18 @@ body {
 .page-leave-to {
   opacity: 0;
 }
+
+.content-section {
+  padding: 6rem 0;
+
+  &-lg {
+    @include media-breakpoint-up(lg) {
+      padding: 10rem 0;
+    }
+  }
+
+  &.is-image {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}

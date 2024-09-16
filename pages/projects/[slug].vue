@@ -31,6 +31,22 @@
       message: "Page cannot be found",
     });
   }
+
+  useHead({
+    title: project.value?.metaData?.title ?? "",
+    meta: [
+      ...(project.value?.metaData?.description
+        ? [
+            {
+              hid: "description",
+              name: "description",
+              content: project.value.metaData.description,
+              key: "description",
+            },
+          ]
+        : []),
+    ],
+  });
 </script>
 
 <style scoped></style>

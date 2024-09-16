@@ -1,9 +1,14 @@
 <template>
   <div>
-    <h1>Projects</h1>
-    <div class="container">
-      <div class="project-card-list">
-        <ProjectCard v-for="item in projectCards" v-bind="item" />
+    <div class="content-section">
+      <div class="container">
+        <HeadingBlock tag="h1">
+          <template #tagline>Projects</template>
+          <template #title>Some Things I’ve Worked On</template>
+        </HeadingBlock>
+      </div>
+      <div class="container">
+        <ProjectCardCollection :items="projectCards" />
       </div>
     </div>
   </div>
@@ -37,6 +42,16 @@
   if (data?.value) {
     projects.value = data.value;
   }
+
+  useHead({
+    title: "Projects | Creature Pixel",
+    meta: [
+      {
+        name: "description",
+        content: "Selected projects covering everything from full stack web development, UI/UX design and wireframing to company branding and graphic design.",
+      },
+    ],
+  });
 </script>
 
 <style scoped></style>

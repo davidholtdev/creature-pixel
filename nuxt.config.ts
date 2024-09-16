@@ -2,8 +2,8 @@
 export default defineNuxtConfig({
   compatibilityDate: "2024-04-03",
   devtools: { enabled: true },
-
   css: ["~/assets/scss/main.scss"],
+
   // app: {
   //   pageTransition: {
   //     name: "page",
@@ -12,6 +12,13 @@ export default defineNuxtConfig({
   //   layoutTransition: {
   //     name: "page",
   //     mode: "out-in",
+  //   },
+  // },
+  // build: {
+  //   loaders: {
+  //     scss: {
+  //       implementation: require("sass"),
+  //     },
   //   },
   // },
   vite: {
@@ -23,11 +30,6 @@ export default defineNuxtConfig({
       },
     },
   },
-  // build: {
-  //   loaders: {
-  //     scss: {
-  //       implementation: require("sass"),
-  //     },
-  //   },
-  // },
+
+  modules: ["@nuxt/image"],
 });
