@@ -101,12 +101,28 @@ export enum ProjectTypes {
   Design = "Design",
 }
 
+export enum HeadingTagTypes {
+  H1 = "h1",
+  H2 = "h2",
+  H3 = "h3",
+  H4 = "h4",
+  H5 = "h5",
+  H6 = "h6",
+  P = "p",
+}
+
+export interface MetaData {
+  title?: string;
+  description?: string;
+}
+
 export interface Projects {
   items: Project[];
 }
 
 export interface Project {
   id: number;
+  metaData?: MetaData;
   slug: string;
   title: string;
   type: ProjectTypes;
@@ -133,4 +149,15 @@ export interface Image {
   size?: number;
   type?: string;
   caption?: string;
+}
+
+export interface HeadingBlock {
+  tag?: HeadingTagTypes | `${HeadingTagTypes}`;
+  tagline?: string;
+  title?: string;
+  description?: string;
+}
+
+export interface ProjectCardCollection {
+  items?: BaseCard[];
 }

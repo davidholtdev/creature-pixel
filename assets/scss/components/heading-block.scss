@@ -1,0 +1,41 @@
+.heading-block {
+  $this: ".heading-block";
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: map-get($spacers, 5);
+
+  &--center {
+    text-align: center;
+
+    & > #{$this}-content {
+      align-self: center;
+    }
+  }
+
+  &--slim {
+    & > #{$this}-content {
+      max-width: 600px;
+    }
+  }
+
+  &-tagline {
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    color: $primary;
+    font-weight: $font-weight-bold;
+    @extend %font-mono;
+    letter-spacing: 1px;
+  }
+
+  &-title {
+    font-weight: $font-weight-bold;
+    color: $headings-color;
+    @extend .h2;
+  }
+
+  &-description {
+    @extend .lead;
+  }
+}

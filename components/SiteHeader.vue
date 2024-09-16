@@ -46,7 +46,6 @@
   };
 
   const close = () => {
-    console.log("closing");
     document.removeEventListener(EventListeners.KeyDown, handleKeydownEvent);
     isOpen.value = false;
   };
