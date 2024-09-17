@@ -1,6 +1,19 @@
 <template>
   <div>
-    <h1>{{ project?.title }}</h1>
+    <div class="content-section">
+      <div v-if="project?.type || project?.title" class="container container-slim">
+        <HeadingBlock tag="h1" title-size="lg">
+          <template v-if="project?.type" #tagline>{{ project.type }}</template>
+          <template v-if="project?.title" #title>{{ project.title }}</template>
+        </HeadingBlock>
+      </div>
+      <div v-if="project?.image" class="container">
+        <div class="image-wrapper">
+          <NuxtImg :src="project.image.src" :width="project.image.width" :height="project.image.height" :alt="project.image.altText" densities="x1 x2"></NuxtImg>
+        </div>
+      </div>
+      <ContentBlock v-if="project?.components && project.components.length" v-for="item in project?.components" v-bind="item" />
+    </div>
   </div>
 </template>
 

@@ -19,6 +19,14 @@ body {
   opacity: 0;
 }
 
+.container {
+  &-slim {
+    @include media-breakpoint-up(lg) {
+      max-width: map-get($container-max-widths, lg) !important;
+    }
+  }
+}
+
 .content-section {
   padding: 6rem 0;
 
@@ -31,5 +39,39 @@ body {
   &.is-image {
     padding-top: 0;
     padding-bottom: 0;
+  }
+}
+
+.rte-content {
+  & > * {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  background-color: $navy-light;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 10px 30px -15px $navy-dark;
+
+  & img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  & + & {
+    margin-top: 2.5rem;
   }
 }

@@ -1,10 +1,10 @@
 <template>
-  <div class="heading-block heading-block--slim heading-block--center">
+  <div class="heading-block" :class="[blockAlignment, blockSize]">
     <div class="heading-block-content">
       <div v-if="hasTagline" class="heading-block-tagline">
         <slot name="tagline">{{ tagline }}</slot>
       </div>
-      <component :is="resolvedTag" v-if="hasTitle" class="heading-block-title">
+      <component :is="resolvedTag" v-if="hasTitle" class="heading-block-title" :class="titleSize">
         <slot name="title">{{ title }}</slot>
       </component>
       <p v-if="hasDescription" class="heading-block-description">
@@ -28,6 +28,18 @@
 
   const resolvedTag = computed(() => {
     return Object.values(HeadingTagTypes).includes(props.tag as HeadingTagTypes) ? props.tag : HeadingTagTypes.H2;
+  });
+
+  const blockAlignment = computed(() => {
+    return props?.alignment === "center" ? "heading-block--center" : "";
+  });
+
+  const blockSize = computed(() => {
+    return props?.containerSize === "sm" ? "heading-block--slim" : "";
+  });
+
+  const titleSize = computed(() => {
+    return props?.titleSize === "lg" ? "heading-block-title-lg" : "";
   });
 </script>
 

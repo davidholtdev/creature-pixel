@@ -2,12 +2,12 @@
   <div>
     <div class="content-section">
       <div class="container">
-        <HeadingBlock tag="h1">
+        <HeadingBlock tag="h1" :alignment="'center'" :container-size="'sm'">
           <template #tagline>Projects</template>
           <template #title>Some Things I’ve Worked On</template>
         </HeadingBlock>
       </div>
-      <div class="container">
+      <div v-if="projectCards && projectCards.length" class="container">
         <ProjectCardCollection :items="projectCards" />
       </div>
     </div>
