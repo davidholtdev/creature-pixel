@@ -3,6 +3,9 @@
     <div class="container container-slim">
       <slot name="content" v-if="useSlots().content" class="rte-content"></slot>
       <div v-else-if="combinedContent" v-html="combinedContent" class="rte-content"></div>
+      <div v-if="link" class="mt-5">
+        <CallToAction :link="link">{{ link.name }}</CallToAction>
+      </div>
     </div>
   </div>
   <div v-if="images && images.length" class="container">

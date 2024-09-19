@@ -85,78 +85,16 @@ const projects: Project[] = [
           '<h2><span class="h1">The result</span></h2>',
           "<p>A new end-to-end system built around a centralised content management system, alongside a powerful suite of automation API endpoints and dashboards. Allowing for improved back-office and content management, automated and optimised workflows and less maintenance.</p>",
         ],
+        link: {
+          name: "View the site",
+          url: "https://www.newmarketholidays.co.uk",
+          target: "_black",
+        },
       },
     ],
   },
   {
     id: 2,
-    metaData: {
-      title: "Edwards Cleaning Service | Creature Pixel",
-      description: "A high-level breakdown of the Edwards Cleaning Service development project.",
-    },
-    slug: "edwards-cleaning-service",
-    title: "Edwards Cleaning Service",
-    type: ProjectTypes.Development,
-    summary: "A complete company brand, plus a simple-to-use website with an integrated content management system, allowing for adaptive online growth at the same pace as business growth.",
-    tileImage: {
-      src: "/images/projects/edwards-cleaning-service/tile-image.png",
-      altText: "Edwards cleaning service logo",
-      width: 1000,
-      height: 428,
-    },
-    image: {
-      src: "/images/projects/edwards-cleaning-service/template-4.jpg",
-      altText: "",
-      width: 2000,
-      height: 1125,
-    },
-    tags: ["C# ASP.NET MVC", "Umbraco", "jQuery/AngularJs", "Bootstrap/SCSS"],
-    components: [
-      {
-        content: [
-          '<p><span class="h1">Edwards Cleaning Service is an independently owned company offering a multitude of both domestic and commercial cleaning services.</span></p>',
-          "<p>The company was just starting and had no digital or design presence, a clean slate. But they needed a professional to help them create the building blocks for their company identity along with a simple, affordable, and robust website that can give them the flexibility to grow online at the same pace that their business grows.</p>",
-          "<p>With this information in mind, I started to examine and research existing companies in the same sector trying to get an initial feel for branding values and direction. We wanted it to be simple, clean, and trustworthy but still reflect the core identity of the company and the owner himself. The outcome was a minimalist colour pallet, plain midtones and white space, complimented by a bold primary and secondary colour to be used sparingly to have better control over CTAs or promotions. The logo was designed to be uncomplicated, free from distractions such as icons or design features, leaving the emphasis on the name of the business only. The thought process behind this was to improve readability for signage such as vehicle vinyl or adverts.</p>",
-        ],
-        images: [
-          {
-            src: "/images/projects/edwards-cleaning-service/template-2.jpg",
-            altText: "",
-            width: 2000,
-            height: 1125,
-          },
-        ],
-      },
-      {
-        content: [
-          '<h2><span class="h1">But what about the website?</span></h2>',
-          "<p>The online requirements were pretty straightforward, a website that was clean, spacious and that provided quick, concise information about services and pricing. Usually, such an online service would require some kind of integrated booking system but this was not the case. The company was in its infancy and did not require such features, but they still wanted a platform that could easily introduce additional functionality when required. We decided to build the site using the Umbraco CMS, allowing the company to quickly and intuitively manage the website's content without the worry of continuous development support. Plus laying the necessary foundations for development growth should the need ever arise.</p>",
-        ],
-        images: [
-          {
-            src: "/images/projects/edwards-cleaning-service/template-5.jpg",
-            altText: "",
-            width: 2000,
-            height: 1125,
-          },
-          {
-            src: "/images/projects/edwards-cleaning-service/template-6.jpg",
-            altText: "",
-            width: 2000,
-            height: 1125,
-          },
-        ],
-      },
-      {
-        content: [
-          '<h2><span class="h1">The result</span></h2>',
-          "<p>A complete company brand, plus a simple-to-use website with an integrated content management system, allowing for adaptive online growth at the same pace as business growth.</p>",
-        ],
-      },
-    ],
-  },
-  {
-    id: 3,
     metaData: {
       title: "Beyond Travel Blog | Creature Pixel",
       description: "A high-level breakdown of the Beyond Travel Blog development project.",
@@ -229,6 +167,78 @@ const projects: Project[] = [
         content: [
           '<h2><span class="h1">The result</span></h2>',
           "<p>A complete branding refresh, in addition, to a complete site rebuild and integration directly into the primary environment. Allowing for improved content management, optimised page speeds, less maintenance and overall an improved company workflow.</p>",
+        ],
+        link: {
+          name: "View the site",
+          url: "https://www.newmarketholidays.co.uk/blog",
+          target: "_black",
+        },
+      },
+    ],
+  },
+  {
+    id: 3,
+    metaData: {
+      title: "Edwards Cleaning Service | Creature Pixel",
+      description: "A high-level breakdown of the Edwards Cleaning Service development project.",
+    },
+    slug: "edwards-cleaning-service",
+    title: "Edwards Cleaning Service",
+    type: ProjectTypes.Development,
+    summary: "A complete company brand, plus a simple-to-use website with an integrated content management system, allowing for adaptive online growth at the same pace as business growth.",
+    tileImage: {
+      src: "/images/projects/edwards-cleaning-service/tile-image.png",
+      altText: "Edwards cleaning service logo",
+      width: 1000,
+      height: 428,
+    },
+    image: {
+      src: "/images/projects/edwards-cleaning-service/template-4.jpg",
+      altText: "",
+      width: 2000,
+      height: 1125,
+    },
+    tags: ["C# ASP.NET MVC", "Umbraco", "jQuery/AngularJs", "Bootstrap/SCSS"],
+    components: [
+      {
+        content: [
+          '<p><span class="h1">Edwards Cleaning Service is an independently owned company offering a multitude of both domestic and commercial cleaning services.</span></p>',
+          "<p>The company was just starting and had no digital or design presence, a clean slate. But they needed a professional to help them create the building blocks for their company identity along with a simple, affordable, and robust website that can give them the flexibility to grow online at the same pace that their business grows.</p>",
+          "<p>With this information in mind, I started to examine and research existing companies in the same sector trying to get an initial feel for branding values and direction. We wanted it to be simple, clean, and trustworthy but still reflect the core identity of the company and the owner himself. The outcome was a minimalist colour pallet, plain midtones and white space, complimented by a bold primary and secondary colour to be used sparingly to have better control over CTAs or promotions. The logo was designed to be uncomplicated, free from distractions such as icons or design features, leaving the emphasis on the name of the business only. The thought process behind this was to improve readability for signage such as vehicle vinyl or adverts.</p>",
+        ],
+        images: [
+          {
+            src: "/images/projects/edwards-cleaning-service/template-2.jpg",
+            altText: "",
+            width: 2000,
+            height: 1125,
+          },
+        ],
+      },
+      {
+        content: [
+          '<h2><span class="h1">But what about the website?</span></h2>',
+          "<p>The online requirements were pretty straightforward, a website that was clean, spacious and that provided quick, concise information about services and pricing. Usually, such an online service would require some kind of integrated booking system but this was not the case. The company was in its infancy and did not require such features, but they still wanted a platform that could easily introduce additional functionality when required. We decided to build the site using the Umbraco CMS, allowing the company to quickly and intuitively manage the website's content without the worry of continuous development support. Plus laying the necessary foundations for development growth should the need ever arise.</p>",
+        ],
+        images: [
+          {
+            src: "/images/projects/edwards-cleaning-service/template-5.jpg",
+            altText: "",
+            width: 2000,
+            height: 1125,
+          },
+          {
+            src: "/images/projects/edwards-cleaning-service/template-6.jpg",
+            altText: "",
+            width: 2000,
+            height: 1125,
+          },
+        ],
+      },
+      {
+        content: [
+          '<h2><span class="h1">The result</span></h2>',
+          "<p>A complete company brand, plus a simple-to-use website with an integrated content management system, allowing for adaptive online growth at the same pace as business growth.</p>",
         ],
       },
     ],
@@ -377,6 +387,11 @@ const projects: Project[] = [
           '<h2><span class="h1">The result</span></h2>',
           "<p>A multitude of design components and characters, complemented by a catalogue of marketing material ranging from signage and scorecards to party invites and corporate letterheads.</p>",
         ],
+        link: {
+          name: "View the site",
+          url: "https://hortongolfpark.com/adventure-golf",
+          target: "_black",
+        },
       },
     ],
   },
@@ -450,6 +465,11 @@ const projects: Project[] = [
           '<h2><span class="h1">The result</span></h2>',
           "<p>A complete site refresh and online theme built with the purpose of reusability across both internal and external facing applications, alongside a new and refreshed line of apparel-based design components.</p>",
         ],
+        link: {
+          name: "View the site",
+          url: "https://skifocus.co.uk",
+          target: "_black",
+        },
       },
     ],
   },

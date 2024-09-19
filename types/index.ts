@@ -113,7 +113,6 @@ export enum HeadingTagTypes {
 
 export const enum CallToActionVariant {
   Primary = "primary",
-  Secondary = "secondary",
   None = "none",
 }
 
