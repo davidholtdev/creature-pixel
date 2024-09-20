@@ -39,7 +39,10 @@
   });
 
   const titleSize = computed(() => {
-    return props?.titleSize === "lg" ? "heading-block-title-lg" : "";
+    const sizes = ["sm", "md", "lg", "xl"];
+    let size = sizes[1];
+    if (props.titleSize && sizes.includes(props.titleSize)) size = props.titleSize;
+    return `heading-block-title-${size}`;
   });
 </script>
 

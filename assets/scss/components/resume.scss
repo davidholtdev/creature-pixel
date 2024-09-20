@@ -1,0 +1,77 @@
+.resume-list {
+  &-item {
+    position: relative;
+    padding: 0 0 2rem 2rem;
+    border-left: 2px solid $primary;
+
+    &:last-of-type {
+      padding-bottom: 0;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: 1rem;
+      height: 1rem;
+      border-radius: 50%;
+      left: -1px;
+      top: 0;
+      background: $navy;
+      border: 2px solid $primary;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+// Chart
+.chart {
+  &-box {
+    width: 100%;
+    text-align: center;
+    background: $navy-light;
+    box-shadow: 0 10px 30px -15px $navy-dark;
+    border-radius: 0.75rem;
+    padding: 1rem;
+  }
+
+  & {
+    display: block;
+    margin: 10px auto;
+    max-width: 90px;
+    max-height: 250px;
+
+    &-bg {
+      fill: none;
+      stroke: $navy-dark;
+      stroke-width: 2;
+    }
+
+    &-circle {
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke: $primary;
+    }
+
+    &-text {
+      fill: $white;
+      font-family: $font-mono;
+      font-size: 0.5em;
+      text-anchor: middle;
+    }
+  }
+
+  & > div {
+    font-family: $font-mono;
+  }
+}
+
+.anim {
+  animation: progress 1s ease-out forwards;
+}
+
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}

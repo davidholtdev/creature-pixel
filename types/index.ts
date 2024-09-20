@@ -181,7 +181,7 @@ export interface HeadingBlock {
   description?: string;
   alignment?: "center" | "left";
   containerSize?: "sm" | "md" | "lg";
-  titleSize?: "md" | "lg";
+  titleSize?: "sm" | "md" | "lg" | "xl";
 }
 
 export interface ProjectCardCollection {
