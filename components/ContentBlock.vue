@@ -1,5 +1,5 @@
 <template>
-  <div class="content-section content-section-lg is-content" data-aos="fade-up">
+  <div class="content-section is-content" data-aos="fade-up">
     <div class="container container-slim">
       <slot name="content" v-if="useSlots().content" class="rte-content"></slot>
       <div v-else-if="combinedContent" v-html="combinedContent" class="rte-content"></div>

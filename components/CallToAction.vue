@@ -1,7 +1,7 @@
 <template>
   <component
     :is="elementType"
-    class="cta"
+    class="button"
     :to="link ? link.url : null"
     :external="link ? external : null"
     :target="link ? link.target : null"

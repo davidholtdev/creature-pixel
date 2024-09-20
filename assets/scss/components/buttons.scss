@@ -1,5 +1,4 @@
-.cta,
-button.cta {
+.button {
   padding: $btn-padding-y $btn-padding-x;
   font-family: $btn-font-family;
   font-size: $btn-font-size;
@@ -13,7 +12,7 @@ button.cta {
   line-height: 1.5;
   @include transition($btn-transition);
   vertical-align: middle;
-
+  min-width: 150px;
   text-decoration: none;
   outline: none;
   display: inline-block;
@@ -37,7 +36,7 @@ button.cta {
 Variant modifiers
 ============================= */
 
-.cta[data-variant="primary"] {
+.button[data-variant="primary"] {
   background-color: transparent;
   border-color: $primary;
   color: $primary;
@@ -50,11 +49,7 @@ Variant modifiers
   }
 }
 
-.cta[data-size="small"] {
-  padding-block: var(--cta-padding-block, calc(var(--space-1) - 0.1875rem));
-}
-
-.cta[data-variant="none"] {
+.button[data-variant="none"] {
   border: none;
   background-color: "transparent";
 }
@@ -62,7 +57,7 @@ Variant modifiers
 /* ==========================
 Disabled state
 ============================= */
-.cta[disabled]:not([disabled="false"]) {
+.button[disabled]:not([disabled="false"]) {
   background-color: transparent;
   border-color: $gray-300;
   color: $gray-300;
@@ -72,7 +67,7 @@ Disabled state
   }
 }
 
-.cta:not([data-variant="none"])::before {
+.button:not([data-variant="none"])::before {
   transform: translate3d(-50%, -10%, 0) scale(0.01);
   transition: transform 500ms ease-out;
   backface-visibility: hidden;
@@ -88,6 +83,6 @@ Disabled state
   top: 50%;
 }
 
-.cta:hover::before {
+.button:hover::before {
   transform: translate3d(-50%, -50%, 0) scale(1);
 }

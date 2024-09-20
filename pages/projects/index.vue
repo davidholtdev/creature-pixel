@@ -11,6 +11,7 @@
         <ProjectCardCollection :items="projectCards" />
       </div>
     </div>
+    <Connect />
   </div>
 </template>
 

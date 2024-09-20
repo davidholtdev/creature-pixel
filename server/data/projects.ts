@@ -418,7 +418,7 @@ const projects: Project[] = [
       width: 2000,
       height: 1125,
     },
-    tags: ["HTML", "CSS", "Adobe CC", "Graphic Design"],
+    tags: ["HTML5", "CSS", "Adobe CC", "Graphic Design"],
     components: [
       {
         content: [
