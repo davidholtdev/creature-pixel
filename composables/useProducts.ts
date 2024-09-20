@@ -1,7 +1,7 @@
 import type { Project } from "~/types";
 
 interface UseProjects {
-  getProjects: () => Promise<Response<Project[]>>;
+  getProjects: (randomize?: boolean) => Promise<Response<Project[]>>;
 }
 
 interface Response<T> {
@@ -11,29 +11,34 @@ interface Response<T> {
 }
 
 const useProjects = (): UseProjects => {
-  const getProjects = async (): Promise<Response<Project[]>> => {
-    try {
-      const { data, error: fetchError } = await useFetch<Project[] | null>("/api/products");
+  const getProjects = async (randomize?: boolean): Promise<Response<Project[]>> => {
+    const { data, error } = await useFetch<Project[] | null>("/api/products", {
+      query: {
+        random: !!randomize,
+      },
+    });
 
-      if (fetchError.value) {
-        throw new Error(fetchError.value.message || "An unknown error occurred");
-      }
-
-      return {
-        success: true,
-        data,
-      };
-    } catch (err) {
+    if (error.value) {
       return {
         success: false,
-        message: err instanceof Error ? err.message : "An unknown error occurred",
+        message: error.value.message || "An unknown error occurred",
       };
     }
+
+    if (!data.value) {
+      return {
+        success: false,
+        message: "No data returned from the server",
+      };
+    }
+
+    return {
+      success: true,
+      data,
+    };
   };
 
-  return {
-    getProjects,
-  };
+  return { getProjects };
 };
 
 export default useProjects;

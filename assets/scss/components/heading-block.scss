@@ -32,7 +32,14 @@
   &-title {
     font-weight: $font-weight-bold;
     color: $headings-color;
-    @extend .h2;
+
+    &:not(&-lg) {
+      @extend .h2;
+    }
+
+    &-lg {
+      @extend .h1;
+    }
   }
 
   &-description {

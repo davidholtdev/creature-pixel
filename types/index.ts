@@ -111,9 +111,31 @@ export enum HeadingTagTypes {
   P = "p",
 }
 
+export const enum CallToActionVariant {
+  Primary = "primary",
+  None = "none",
+}
+
 export interface MetaData {
   title?: string;
   description?: string;
+}
+
+export interface Link {
+  name: string;
+  url: string;
+  target?: string;
+}
+
+export interface CallToAction {
+  link?: Link;
+  variant?: CallToActionVariant;
+  type?: string;
+  small?: boolean;
+  disabled?: boolean;
+  waiting?: boolean;
+  external?: boolean;
+  loading?: boolean;
 }
 
 export interface Projects {
@@ -130,6 +152,7 @@ export interface Project {
   tileImage?: Image;
   image?: Image;
   tags?: string[];
+  components?: ContentBlock[];
 }
 
 export interface BaseCard {
@@ -156,8 +179,17 @@ export interface HeadingBlock {
   tagline?: string;
   title?: string;
   description?: string;
+  alignment?: "center" | "left";
+  containerSize?: "sm" | "md" | "lg";
+  titleSize?: "md" | "lg";
 }
 
 export interface ProjectCardCollection {
   items?: BaseCard[];
+}
+
+export interface ContentBlock {
+  content?: string | string[];
+  images?: Image[];
+  link?: Link;
 }

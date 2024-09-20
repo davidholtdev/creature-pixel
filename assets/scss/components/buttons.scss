@@ -1,0 +1,88 @@
+.button {
+  padding: $btn-padding-y $btn-padding-x;
+  font-family: $btn-font-family;
+  font-size: $btn-font-size;
+  position: relative;
+  text-align: center;
+  border: $btn-border-width solid;
+  font-weight: 500;
+  border-radius: $btn-border-radius;
+  overflow: hidden;
+  appearance: none;
+  line-height: 1.5;
+  @include transition($btn-transition);
+  vertical-align: middle;
+  min-width: 150px;
+  text-decoration: none;
+  outline: none;
+  display: inline-block;
+
+  &:hover,
+  &:focus,
+  &:active {
+    outline: none;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:not([disabled]) {
+    cursor: pointer;
+  }
+}
+
+/* ==========================
+Variant modifiers
+============================= */
+
+.button[data-variant="primary"] {
+  background-color: transparent;
+  border-color: $primary;
+  color: $primary;
+  &::before {
+    background: $primary;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 $btn-focus-width rgba($primary, 0.5);
+  }
+}
+
+.button[data-variant="none"] {
+  border: none;
+  background-color: "transparent";
+}
+
+/* ==========================
+Disabled state
+============================= */
+.button[disabled]:not([disabled="false"]) {
+  background-color: transparent;
+  border-color: $gray-300;
+  color: $gray-300;
+
+  &::before {
+    content: none;
+  }
+}
+
+.button:not([data-variant="none"])::before {
+  transform: translate3d(-50%, -10%, 0) scale(0.01);
+  transition: transform 500ms ease-out;
+  backface-visibility: hidden;
+  pointer-events: none;
+  border-radius: 100%;
+  position: absolute;
+  padding-top: 150%;
+  opacity: 0.075;
+  width: 150%;
+  content: "";
+  height: 0;
+  left: 50%;
+  top: 50%;
+}
+
+.button:hover::before {
+  transform: translate3d(-50%, -50%, 0) scale(1);
+}
