@@ -33,12 +33,20 @@
     font-weight: $font-weight-bold;
     color: $headings-color;
 
-    &:not(&-lg) {
-      @extend .h2;
+    &-xl {
+      @include font-size(map-get($display-font-sizes, 5));
     }
 
     &-lg {
-      @extend .h1;
+      @include font-size(map-get($font-sizes, 1));
+    }
+
+    &-md {
+      @include font-size(map-get($font-sizes, 2));
+    }
+
+    &-sm {
+      @include font-size(map-get($font-sizes, 4));
     }
   }
 
