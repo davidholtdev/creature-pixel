@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <div class="page-wrapper">
     <NuxtLoadingIndicator :height="5" :color="'var(--bs-primary)'" />
     <SiteHeader />
     <main>
-      <NuxtPage />
+      <slot />
     </main>
     <SiteFooter />
   </div>
