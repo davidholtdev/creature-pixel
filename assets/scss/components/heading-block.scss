@@ -27,6 +27,7 @@
     font-weight: $font-weight-bold;
     @extend %font-mono;
     letter-spacing: 1px;
+    margin-bottom: map-get($spacers, 1);
   }
 
   &-title {
