@@ -14,6 +14,9 @@
               <li class="header-nav-item">
                 <NuxtLink to="/projects">Projects</NuxtLink>
               </li>
+              <li class="header-nav-item">
+                <NuxtLink to="/scrapbook">Scrapbook</NuxtLink>
+              </li>
             </ul>
           </nav>
         </div>
