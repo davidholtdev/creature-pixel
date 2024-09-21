@@ -16,8 +16,11 @@
 </template>
 
 <script setup lang="ts">
+  import { getPageTitle } from "@/utils/helpers";
+  import { appRoutes } from "@/utils/constants.js";
+
   useHead({
-    title: "Scrapbook | Creature Pixel",
+    title: getPageTitle(appRoutes.scrapbook.label),
     meta: [
       {
         name: "description",

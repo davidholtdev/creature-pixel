@@ -4,7 +4,7 @@ const projects: Project[] = [
   {
     id: 1,
     metaData: {
-      title: "Newmarket Holidays | Creature Pixel",
+      title: "Newmarket Holidays",
       description: "A high-level breakdown of the Newmarket Holidays development project.",
     },
     slug: "newmarket-holidays",
@@ -96,7 +96,7 @@ const projects: Project[] = [
   {
     id: 2,
     metaData: {
-      title: "Beyond Travel Blog | Creature Pixel",
+      title: "Beyond Travel Blog",
       description: "A high-level breakdown of the Beyond Travel Blog development project.",
     },
     slug: "beyond-travel-blog",
@@ -179,7 +179,7 @@ const projects: Project[] = [
   {
     id: 3,
     metaData: {
-      title: "Edwards Cleaning Service | Creature Pixel",
+      title: "Edwards Cleaning Service",
       description: "A high-level breakdown of the Edwards Cleaning Service development project.",
     },
     slug: "edwards-cleaning-service",
@@ -246,7 +246,7 @@ const projects: Project[] = [
   {
     id: 4,
     metaData: {
-      title: "Secure Cloudlink | Creature Pixel",
+      title: "Secure Cloudlink",
       description: "A high-level breakdown of the Secure Cloudlink development project.",
     },
     slug: "secure-cloudlink",
@@ -325,7 +325,7 @@ const projects: Project[] = [
   {
     id: 5,
     metaData: {
-      title: "Jungle Island Adventure Golf | Creature Pixel",
+      title: "Jungle Island Adventure Golf",
       description: "A high-level breakdown of the Jungle Island Adventure Golf design project.",
     },
     slug: "jungle-island-adventure-golf",
@@ -398,7 +398,7 @@ const projects: Project[] = [
   {
     id: 6,
     metaData: {
-      title: "Ski Focus | Creature Pixel",
+      title: "Ski Focus",
       description: "A high-level breakdown of the Jungle Island Adventure Golf design project.",
     },
     slug: "ski-focus",

@@ -16,6 +16,8 @@
 </template>
 
 <script setup lang="ts">
+  import { getPageTitle } from "@/utils/helpers";
+  import { appRoutes } from "@/utils/constants.js";
   import { type Project, type BaseCard } from "@/types";
   import useProjects from "~/composables/useProducts";
 
@@ -30,7 +32,7 @@
       summary: x.summary,
       tags: x.tags,
       image: x.tileImage,
-      url: `/projects/${x.slug}`,
+      url: `${appRoutes.projects.path}/${x.slug}`,
     }));
   });
 
@@ -45,7 +47,7 @@
   }
 
   useHead({
-    title: "Projects | Creature Pixel",
+    title: getPageTitle(appRoutes.projects.label),
     meta: [
       {
         name: "description",

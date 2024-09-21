@@ -33,6 +33,7 @@
 </template>
 
 <script setup lang="ts">
+  import { getPageTitle } from "@/utils/helpers";
   import type { Project, BaseCard } from "@/types";
 
   import useProjects from "~/composables/useProducts";
@@ -51,7 +52,7 @@
       summary: x.summary,
       tags: x.tags,
       image: x.tileImage,
-      url: `/projects/${x.slug}`,
+      url: `${appRoutes.projects.path}/${x.slug}`,
     }));
   });
 
@@ -76,7 +77,7 @@
   projects.value = data.value!.filter((x) => x.id !== project.value!.id).slice(0, 3);
 
   useHead({
-    title: project.value?.metaData?.title ?? "",
+    title: getPageTitle(project.value?.metaData?.title),
     meta: [
       ...(project.value?.metaData?.description
         ? [

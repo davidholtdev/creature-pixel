@@ -111,6 +111,24 @@ export enum HeadingTagTypes {
   P = "p",
 }
 
+export enum Tags {
+  UMBRACO_CMS = "Umbraco CMS",
+  NUXT3 = "NuxtJs",
+  ALGOLIA = "Algolia",
+  TYPESCRIPT = "Typescript",
+  NET_CORE = ".NET Core",
+  C_SHARP_MVC = "C# ASP.NET MVC",
+  ENTITY_FRAMEWORK = "Entity Framework",
+  AZURE = "Azure",
+  ANGULAR_JS = "AngularJS",
+  JAVASCRIPT_JQUERY = "JavaScript / jQuery",
+  BOOTSTRAP = "Bootstrap Framework",
+  CSS_SCSS = "CSS / SCSS",
+  HTML5 = "HTML5",
+  ADOBE_SUITE = "Adobe Creative Suite",
+  AFFINITY_SUITE = "Affinity Suite",
+}
+
 export const enum CallToActionVariant {
   Primary = "primary",
   None = "none",
