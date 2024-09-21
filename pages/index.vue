@@ -6,4 +6,18 @@
   </div>
 </template>
 
+<script setup lang="ts">
+  import { getPageTitle } from "@/utils/helpers";
+
+  useHead({
+    title: getPageTitle(),
+    meta: [
+      {
+        name: "description",
+        content: "",
+      },
+    ],
+  });
+</script>
+
 <style scoped></style>

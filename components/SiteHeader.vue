@@ -1,21 +1,21 @@
 <template>
   <header id="Header" class="header">
-    <NuxtLink to="/" class="header-logo">Creature Pixel</NuxtLink>
+    <NuxtLink :to="appRoutes.home.path" class="header-logo">{{ appName }}</NuxtLink>
     <div class="header-navigation">
       <div id="MenuPlugin" class="header-menu">
         <div class="header-menu-bg"></div>
         <div class="header-menu-main">
-          <NuxtLink to="/" class="header-logo">Creature Pixel</NuxtLink>
+          <NuxtLink :to="appRoutes.home.path" class="header-logo">{{ appName }}</NuxtLink>
           <nav>
             <ul class="header-nav">
               <li class="header-nav-item">
-                <NuxtLink to="/experience">Experience</NuxtLink>
+                <NuxtLink :to="appRoutes.experience.path">{{ appRoutes.experience.label }}</NuxtLink>
               </li>
               <li class="header-nav-item">
-                <NuxtLink to="/projects">Projects</NuxtLink>
+                <NuxtLink :to="appRoutes.projects.path">{{ appRoutes.projects.label }}</NuxtLink>
               </li>
               <li class="header-nav-item">
-                <NuxtLink to="/scrapbook">Scrapbook</NuxtLink>
+                <NuxtLink :to="appRoutes.scrapbook.path">{{ appRoutes.scrapbook.label }}</NuxtLink>
               </li>
             </ul>
           </nav>
@@ -33,6 +33,7 @@
 </template>
 
 <script setup lang="ts">
+  import { appRoutes, appName } from "@/utils/constants.js";
   import { KeydownKeys, EventListeners } from "@/types";
 
   const router = useRouter();

@@ -31,22 +31,21 @@
 </template>
 
 <script setup lang="ts">
+  import { getPageTitle } from "@/utils/helpers";
+  import { appRoutes } from "@/utils/constants.js";
+
   const error = useError();
 
   const handleError = () => {
     clearError({
-      redirect: "/",
+      redirect: appRoutes.home.path,
     });
   };
 
-  const getPageTitle = (statusCode: any) => {
-    let value = "500 Internal server error";
-    if (statusCode === 404) value = "404 Page not found";
-    return `${value} | Creature Pixel`;
-  };
+  const pageTitle = error.value.statusCode === 404 ? "404 Page not found" : "500 Internal server error";
 
   useHead({
-    title: getPageTitle(error.value.statusCode),
+    title: getPageTitle(pageTitle),
   });
 </script>
 

@@ -95,8 +95,11 @@
 </template>
 
 <script setup lang="ts">
+  import { getPageTitle } from "@/utils/helpers";
+  import { appRoutes } from "@/utils/constants.js";
+
   useHead({
-    title: "Experience | Creature Pixel",
+    title: getPageTitle(appRoutes.experience.label),
     meta: [
       {
         name: "description",
