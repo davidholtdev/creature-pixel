@@ -2,7 +2,7 @@
   <div class="project-card">
     <NuxtLink v-if="url" :to="url" class="project-card-image">
       <template v-if="image && image.src">
-        <NuxtImg :src="image.src" :width="image.width" :height="image.height" :alt="image.altText"></NuxtImg>
+        <NuxtImg :src="image.src" :width="image.width" :alt="image.altText" sizes="sm:640px md:340px lg:300px xl:360px xxl:420px" densities="x1 x2"></NuxtImg>
       </template>
     </NuxtLink>
     <div v-else class="project-card-image"></div>

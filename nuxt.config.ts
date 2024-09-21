@@ -6,13 +6,22 @@ export default defineNuxtConfig({
   modules: ["@nuxt/image", "@nuxtjs/google-fonts"],
   googleFonts: {
     families: {
-      // Choose the font families you need
       Roboto: [300, 400, 700],
       "Roboto+Mono": [300, 400, 700],
     },
-    display: "swap", // Ensures fonts render with minimal layout shift
-    prefetch: true, // Prefetches the font
-    preload: true, // Preloads the font
+    display: "swap",
+    prefetch: true,
+    preload: true,
+  },
+  image: {
+    screens: {
+      xs: 320,
+      sm: 576,
+      md: 768,
+      lg: 992,
+      xl: 1200,
+      xxl: 1400,
+    },
   },
   // app: {
   //   pageTransition: {
