@@ -17,7 +17,7 @@
       </div>
       <p class="lead">A London-based web developer with over 10 years of experience designing and building digital solutions.</p>
       <p class="font-mono mt-5 mb-2 h6">Core Technologies:</p>
-      <p class="small font-mono">Umbraco CMS, C# ASP.NET MVC, Entity Framework, Azure, AngularJs, JavaScript / jQuery, Bootstrap Framework, SCSS, HTML5, Adobe Creative Suite, Affinity Suite</p>
+      <p class="small font-mono">Umbraco CMS, C# ASP.NET MVC, Entity Framework, Azure, NuxtJs, AngularJs, JavaScript / jQuery, CSS / SCSS, HTML5, Adobe Creative Suite, Affinity Suite</p>
       <hr class="my-5" />
     </div>
     <div class="container container-slim">

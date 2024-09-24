@@ -6,7 +6,7 @@ interface UseScrapbook {
 
 const useScrapbook = (): UseScrapbook => {
   const get = async (take?: number): Promise<Response<Scrapbook[]>> => {
-    const { data, error } = await useFetch<Scrapbook[] | null>("/api/scrapbook", {
+    const { data, error } = await useFetch<Response<Scrapbook[]>>("/api/scrapbook", {
       query: {
         take,
       },
@@ -19,7 +19,7 @@ const useScrapbook = (): UseScrapbook => {
       };
     }
 
-    if (!data.value) {
+    if (!data.value || !data.value.data) {
       return {
         success: false,
         message: "No data returned from the server",
@@ -28,7 +28,8 @@ const useScrapbook = (): UseScrapbook => {
 
     return {
       success: true,
-      data,
+      data: data.value.data,
+      total: data.value.total,
     };
   };
 

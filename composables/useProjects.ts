@@ -1,19 +1,14 @@
-import type { Project } from "~/types";
+import type { Response, Project } from "~/types";
 
 interface UseProjects {
-  getProjects: (randomize?: boolean) => Promise<Response<Project[]>>;
-}
-
-interface Response<T> {
-  success: boolean;
-  data?: Ref<T | null>;
-  message?: string | null;
+  get: (take?: number, randomize?: boolean) => Promise<Response<Project[]>>;
 }
 
 const useProjects = (): UseProjects => {
-  const getProjects = async (randomize?: boolean): Promise<Response<Project[]>> => {
-    const { data, error } = await useFetch<Project[] | null>("/api/products", {
+  const get = async (take?: number, randomize?: boolean): Promise<Response<Project[]>> => {
+    const { data, error } = await useFetch<Response<Project[]>>("/api/products", {
       query: {
+        take,
         random: !!randomize,
       },
     });
@@ -25,7 +20,7 @@ const useProjects = (): UseProjects => {
       };
     }
 
-    if (!data.value) {
+    if (!data.value || !data.value.data) {
       return {
         success: false,
         message: "No data returned from the server",
@@ -34,11 +29,12 @@ const useProjects = (): UseProjects => {
 
     return {
       success: true,
-      data,
+      data: data.value.data,
+      total: data.value.total,
     };
   };
 
-  return { getProjects };
+  return { get };
 };
 
 export default useProjects;
