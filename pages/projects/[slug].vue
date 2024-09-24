@@ -36,9 +36,7 @@
   import { getPageTitle } from "@/utils/helpers";
   import type { Project, BaseCard } from "@/types";
 
-  import useProjects from "~/composables/useProducts";
-
-  const { getProjects } = useProjects();
+  const { get } = useProjects();
 
   const route = useRoute();
   const slug = route.params.slug as string;
@@ -56,16 +54,16 @@
     }));
   });
 
-  const { success, data } = await getProjects(true);
+  const { success, data } = await get(undefined, true);
 
-  if (!success || !data?.value) {
+  if (!success || !data) {
     throw createError({
       statusCode: 500,
       message: "Error fetching data!",
     });
   }
 
-  project.value = data.value.find((x: { slug: string }) => x.slug === slug) ?? null;
+  project.value = data.find((x: { slug: string }) => x.slug === slug) ?? null;
 
   if (!project.value) {
     throw createError({
@@ -74,7 +72,7 @@
     });
   }
 
-  projects.value = data.value!.filter((x) => x.id !== project.value!.id).slice(0, 3);
+  projects.value = data!.filter((x) => x.id !== project.value!.id).slice(0, 3);
 
   useHead({
     title: getPageTitle(project.value?.metaData?.title),

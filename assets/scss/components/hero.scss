@@ -1,0 +1,76 @@
+.hero {
+  & {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-height: calc(100vh - $header-height);
+    overflow: hidden;
+  }
+
+  &-title {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    margin: 0;
+    font-size: 35px;
+    font-size: clamp(35px, 8vw, 55px);
+    font-weight: 700;
+    color: $white;
+
+    @include media-breakpoint-up(lg) {
+      line-height: initial;
+      gap: 0;
+    }
+
+    & > span {
+      &:first-of-type {
+        display: block;
+        font-size: 50%;
+        position: relative;
+        color: $primary;
+        line-height: 1;
+
+        @include media-breakpoint-up(md) {
+          font-size: 35%;
+        }
+      }
+    }
+  }
+
+  &-body {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    gap: 2.5rem;
+  }
+
+  &-subtitle {
+    margin-top: 10px;
+    font-size: 20px;
+    font-size: clamp(16px, 8vw, 20px);
+    margin: map-get($spacers, 4) 0 0 0;
+  }
+
+  &-background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 105%;
+    height: 105%;
+    transform: translate(-50%, -50%);
+    opacity: 0.03;
+    z-index: -1;
+
+    & path {
+      stroke: white;
+      stroke-width: 3;
+    }
+  }
+
+  &-emoji {
+    opacity: 1;
+    filter: grayscale(100%);
+  }
+}

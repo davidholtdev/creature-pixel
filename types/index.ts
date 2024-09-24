@@ -1,7 +1,8 @@
 export interface Response<T> {
   success: boolean;
-  data?: Ref<T | null>;
+  data?: T | null;
   message?: string | null;
+  total?: number | null;
 }
 
 export enum KeydownKeys {

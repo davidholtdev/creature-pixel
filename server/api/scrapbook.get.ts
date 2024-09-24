@@ -1,10 +1,11 @@
 import data from "@/server/data/scapbook";
+import { Response, Scrapbook } from "~/types";
 
 type QueryParams = {
   take?: string;
 };
 
-export default defineEventHandler((event) => {
+export default defineEventHandler((event): Response<Scrapbook[]> => {
   const query = getQuery<QueryParams>(event);
 
   let take: number | undefined = undefined;
@@ -15,11 +16,14 @@ export default defineEventHandler((event) => {
     if (isNaN(take) || take <= 0) {
       take = undefined;
     }
-
-    if (take) {
-      return [...data].splice(0, take);
-    }
   }
 
-  return data;
+  const total = data.length;
+
+  return {
+    success: true,
+    data: take ? [...data].splice(0, take) : data,
+    message: "",
+    total,
+  };
 });

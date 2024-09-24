@@ -19,9 +19,8 @@
   import { getPageTitle } from "@/utils/helpers";
   import { appRoutes } from "@/utils/constants.js";
   import { type Project, type BaseCard } from "@/types";
-  import useProjects from "~/composables/useProducts";
 
-  const { getProjects } = useProjects();
+  const { get } = useProjects();
 
   const projects = ref<Project[]>([]);
 
@@ -36,14 +35,14 @@
     }));
   });
 
-  const { success, data, message } = await getProjects();
+  const { success, data, message } = await get();
 
   if (!success) {
     console.error("Error fetching products:", message);
   }
 
-  if (data?.value) {
-    projects.value = data.value;
+  if (success && data) {
+    projects.value = data;
   }
 
   useHead({
