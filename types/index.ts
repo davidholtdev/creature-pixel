@@ -1,3 +1,9 @@
+export interface Response<T> {
+  success: boolean;
+  data?: Ref<T | null>;
+  message?: string | null;
+}
+
 export enum KeydownKeys {
   Enter = "Enter",
   Escape = "Escape",
@@ -180,6 +186,16 @@ export interface BaseCard {
   summary?: string;
   tags?: string[];
   url?: string;
+}
+
+export interface BaseScrapbook {
+  slug: string;
+  name: string;
+}
+
+export interface Scrapbook extends BaseScrapbook {
+  image: Image;
+  tileImage: Image;
 }
 
 export interface Image {
