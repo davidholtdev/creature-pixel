@@ -7,8 +7,8 @@
           <template #title>I Also Draw, Sometimes</template>
         </HeadingBlock>
       </div>
-      <div class="container container-slim">
-        <BoxCollection />
+      <div v-if="items && items.length" class="container container-slim">
+        <BoxCollection :items="items" />
       </div>
     </div>
     <Connect />
@@ -16,8 +16,24 @@
 </template>
 
 <script setup lang="ts">
+  import type { Scrapbook } from "@/types";
   import { getPageTitle } from "@/utils/helpers";
   import { appRoutes } from "@/utils/constants.js";
+  import useScrapbook from "@/composables/useScrapbook.js";
+
+  const { get } = useScrapbook();
+
+  const items = ref<Scrapbook[]>([]);
+
+  const { success, data, message } = await get();
+
+  if (!success) {
+    console.error("Error fetching products:", message);
+  }
+
+  if (data?.value) {
+    items.value = data.value;
+  }
 
   useHead({
     title: getPageTitle(appRoutes.scrapbook.label),
