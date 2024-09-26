@@ -26,7 +26,6 @@
   const items = ref<Scrapbook[]>([]);
 
   const { success, data, message } = await get();
-  console.log(data);
 
   if (!success) {
     console.error("Error fetching scrapbook:", message);
