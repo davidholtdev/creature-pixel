@@ -1,3 +1,4 @@
+import { getBaseUrl } from "~/utils/helpers";
 import type { Image, BaseScrapbook, Scrapbook } from "~/types";
 
 enum FilePathSuffix {
@@ -5,7 +6,7 @@ enum FilePathSuffix {
   Tile = "tile",
 }
 
-const basePath: string = "/images/scrapbook";
+const basePath: string = `${getBaseUrl()}images/scrapbook`;
 
 const baseItems: BaseScrapbook[] = [
   {
