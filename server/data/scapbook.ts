@@ -6,7 +6,7 @@ enum FilePathSuffix {
   Tile = "tile",
 }
 
-const basePath: string = `${getBaseUrl()}images/scrapbook`;
+const basePath: string = `/images/scrapbook`;
 
 const baseItems: BaseScrapbook[] = [
   {

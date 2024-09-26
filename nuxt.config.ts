@@ -1,20 +1,21 @@
-import { getBaseUrl } from "./utils/helpers";
-
-const baseURL = getBaseUrl();
-
 export default defineNuxtConfig({
   compatibilityDate: "2024-04-03",
   devtools: { enabled: true },
   css: ["~/assets/scss/main.scss"],
+  runtimeConfig: {
+    public: {
+      baseUrl: process.env.BASE_URL || "/",
+    },
+  },
   app: {
-    baseURL: baseURL,
+    baseURL: process.env.BASE_URL || "/",
     head: {
       link: [
-        { rel: "icon", type: "image/x-icon", href: `${baseURL}icons/favicon.ico` },
-        { rel: "apple-touch-icon", sizes: "180x180", href: `${baseURL}icons/apple-touch-icon.png` },
-        { rel: "icon", type: "image/png", sizes: "32x32", href: `${baseURL}icons/favicon-32x32.png` },
-        { rel: "icon", type: "image/png", sizes: "16x16", href: `${baseURL}icons/favicon-16x16.png` },
-        { rel: "manifest", href: `${baseURL}api/webmanifest` },
+        { rel: "icon", type: "image/x-icon", href: `${process.env.BASE_URL || "/"}icons/favicon.ico` },
+        { rel: "apple-touch-icon", sizes: "180x180", href: `${process.env.BASE_URL || "/"}icons/apple-touch-icon.png` },
+        { rel: "icon", type: "image/png", sizes: "32x32", href: `${process.env.BASE_URL || "/"}icons/favicon-32x32.png` },
+        { rel: "icon", type: "image/png", sizes: "16x16", href: `${process.env.BASE_URL || "/"}icons/favicon-16x16.png` },
+        { rel: "manifest", href: `${process.env.BASE_URL || "/"}api/webmanifest` },
       ],
       meta: [{ name: "theme-color", content: "#03D1C5" }],
     },
