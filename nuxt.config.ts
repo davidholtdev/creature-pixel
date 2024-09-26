@@ -14,7 +14,7 @@ export default defineNuxtConfig({
         { rel: "apple-touch-icon", sizes: "180x180", href: `${baseURL}icons/apple-touch-icon.png` },
         { rel: "icon", type: "image/png", sizes: "32x32", href: `${baseURL}icons/favicon-32x32.png` },
         { rel: "icon", type: "image/png", sizes: "16x16", href: `${baseURL}icons/favicon-16x16.png` },
-        { rel: "manifest", href: `${baseURL}site.webmanifest` },
+        { rel: "manifest", href: `${baseURL}api/webmanifest` },
       ],
       meta: [{ name: "theme-color", content: "#03D1C5" }],
     },
