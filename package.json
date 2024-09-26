@@ -7,7 +7,9 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "predeploy": "nuxt generate",
+    "deploy": "gh-pages --dotfiles -d .output/public"
   },
   "dependencies": {
     "@nuxt/image": "^1.8.0",
@@ -19,6 +21,7 @@
   },
   "devDependencies": {
     "@nuxtjs/google-fonts": "^3.2.0",
+    "gh-pages": "^6.1.1",
     "sass": "^1.78.0",
     "sass-loader": "^16.0.1",
     "typescript": "^5.6.2"
