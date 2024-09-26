@@ -1,4 +1,7 @@
+import { getBaseUrl } from "~/utils/helpers";
 import { Project, ProjectTypes } from "@/types";
+
+const basePath: string = `${getBaseUrl()}images/projects`;
 
 const projects: Project[] = [
   {
@@ -13,13 +16,13 @@ const projects: Project[] = [
     summary:
       "A new end-to-end system built around a centralised content management system, alongside a powerful suite of automation API endpoints and dashboards. Allowing for improved back-office and content management, automated and optimised workflows and less maintenance.",
     tileImage: {
-      src: "/images/projects/newmarket-holidays/tile-image.png",
+      src: `${basePath}/newmarket-holidays/tile-image.png`,
       altText: "Newmarket holidays logo",
       width: 1000,
       height: 428,
     },
     image: {
-      src: "/images/projects/newmarket-holidays/template-1.jpg",
+      src: `${basePath}/newmarket-holidays/template-1.jpg`,
       altText: "",
       width: 2000,
       height: 1125,
@@ -33,7 +36,7 @@ const projects: Project[] = [
         ],
         images: [
           {
-            src: "/images/projects/newmarket-holidays/template-4.jpg",
+            src: `${basePath}/newmarket-holidays/template-4.jpg`,
             altText: "",
             width: 2000,
             height: 1125,
@@ -47,13 +50,13 @@ const projects: Project[] = [
         ],
         images: [
           {
-            src: "/images/projects/newmarket-holidays/template-2.jpg",
+            src: `${basePath}/newmarket-holidays/template-2.jpg`,
             altText: "",
             width: 2000,
             height: 1125,
           },
           {
-            src: "/images/projects/newmarket-holidays/template-3.jpg",
+            src: `${basePath}/newmarket-holidays/template-3.jpg`,
             altText: "",
             width: 2000,
             height: 1125,
@@ -67,13 +70,13 @@ const projects: Project[] = [
         ],
         images: [
           {
-            src: "/images/projects/newmarket-holidays/template-5.jpg",
+            src: `${basePath}/newmarket-holidays/template-5.jpg`,
             altText: "",
             width: 2000,
             height: 1125,
           },
           {
-            src: "/images/projects/newmarket-holidays/template-6.jpg",
+            src: `${basePath}/newmarket-holidays/template-6.jpg`,
             altText: "",
             width: 2000,
             height: 1125,
@@ -105,13 +108,13 @@ const projects: Project[] = [
     summary:
       "A complete branding refresh, in addition, to a complete site rebuild and integration directly into the primary environment. Allowing for improved content management, optimised page speeds, less maintenance and overall an improved company workflow.",
     tileImage: {
-      src: "/images/projects/beyond-travel-blog/tile-image.png",
+      src: `${basePath}/beyond-travel-blog/tile-image.png`,
       altText: "Beyone travel blog logo",
       width: 1000,
       height: 428,
     },
     image: {
-      src: "/images/projects/beyond-travel-blog/template-1.jpg",
+      src: `${basePath}/beyond-travel-blog/template-1.jpg`,
       altText: "",
       width: 2000,
       height: 1125,
@@ -125,7 +128,7 @@ const projects: Project[] = [
         ],
         images: [
           {
-            src: "/images/projects/beyond-travel-blog/template-3.jpg",
+            src: `${basePath}/beyond-travel-blog/template-3.jpg`,
             altText: "",
             width: 2000,
             height: 1125,
@@ -139,7 +142,7 @@ const projects: Project[] = [
         ],
         images: [
           {
-            src: "/images/projects/beyond-travel-blog/template-2.jpg",
+            src: `${basePath}/beyond-travel-blog/template-2.jpg`,
             altText: "",
             width: 2000,
             height: 1125,
@@ -156,7 +159,7 @@ const projects: Project[] = [
         ],
         images: [
           {
-            src: "/images/projects/beyond-travel-blog/template-4.jpg",
+            src: `${basePath}/beyond-travel-blog/template-4.jpg`,
             altText: "",
             width: 2000,
             height: 1125,
@@ -187,13 +190,13 @@ const projects: Project[] = [
     type: ProjectTypes.Development,
     summary: "A complete company brand, plus a simple-to-use website with an integrated content management system, allowing for adaptive online growth at the same pace as business growth.",
     tileImage: {
-      src: "/images/projects/edwards-cleaning-service/tile-image.png",
+      src: `${basePath}/edwards-cleaning-service/tile-image.png`,
       altText: "Edwards cleaning service logo",
       width: 1000,
       height: 428,
     },
     image: {
-      src: "/images/projects/edwards-cleaning-service/template-4.jpg",
+      src: `${basePath}/edwards-cleaning-service/template-4.jpg`,
       altText: "",
       width: 2000,
       height: 1125,
@@ -208,7 +211,7 @@ const projects: Project[] = [
         ],
         images: [
           {
-            src: "/images/projects/edwards-cleaning-service/template-2.jpg",
+            src: `${basePath}/edwards-cleaning-service/template-2.jpg`,
             altText: "",
             width: 2000,
             height: 1125,
@@ -222,13 +225,13 @@ const projects: Project[] = [
         ],
         images: [
           {
-            src: "/images/projects/edwards-cleaning-service/template-5.jpg",
+            src: `${basePath}/edwards-cleaning-service/template-5.jpg`,
             altText: "",
             width: 2000,
             height: 1125,
           },
           {
-            src: "/images/projects/edwards-cleaning-service/template-6.jpg",
+            src: `${basePath}/edwards-cleaning-service/template-6.jpg`,
             altText: "",
             width: 2000,
             height: 1125,
@@ -255,13 +258,13 @@ const projects: Project[] = [
     summary:
       "A comprehensive suite of management tools allowing organisations to manage users, applications and security policies across multiple organisations and domains all with a customisable and seamless user experience.",
     tileImage: {
-      src: "/images/projects/secure-cloudlink/tile-image.png",
+      src: `${basePath}/secure-cloudlink/tile-image.png`,
       altText: "Secure cloudlink logo",
       width: 1000,
       height: 428,
     },
     image: {
-      src: "/images/projects/secure-cloudlink/template-1.jpg",
+      src: `${basePath}/secure-cloudlink/template-1.jpg`,
       altText: "",
       width: 2000,
       height: 1125,
@@ -275,13 +278,13 @@ const projects: Project[] = [
         ],
         images: [
           {
-            src: "/images/projects/secure-cloudlink/template-2.jpg",
+            src: `${basePath}/secure-cloudlink/template-2.jpg`,
             altText: "",
             width: 2000,
             height: 1125,
           },
           {
-            src: "/images/projects/secure-cloudlink/template-3.jpg",
+            src: `${basePath}/secure-cloudlink/template-3.jpg`,
             altText: "",
             width: 2000,
             height: 1125,
@@ -295,19 +298,19 @@ const projects: Project[] = [
         ],
         images: [
           {
-            src: "/images/projects/secure-cloudlink/template-4.jpg",
+            src: `${basePath}/secure-cloudlink/template-4.jpg`,
             altText: "",
             width: 2000,
             height: 1125,
           },
           {
-            src: "/images/projects/secure-cloudlink/template-6.jpg",
+            src: `${basePath}/secure-cloudlink/template-6.jpg`,
             altText: "",
             width: 2000,
             height: 1125,
           },
           {
-            src: "/images/projects/secure-cloudlink/template-7.jpg",
+            src: `${basePath}/secure-cloudlink/template-7.jpg`,
             altText: "",
             width: 2000,
             height: 1125,
@@ -333,13 +336,13 @@ const projects: Project[] = [
     type: ProjectTypes.Design,
     summary: "A multitude of design components and characters, complemented by a catalogue of marketing material ranging from signage and scorecards to party invites and corporate letterheads.",
     tileImage: {
-      src: "/images/projects/jungle-island-adventure-golf/tile-image.png",
+      src: `${basePath}/jungle-island-adventure-golf/tile-image.png`,
       altText: "Jungle island adventure golf logo",
       width: 1000,
       height: 428,
     },
     image: {
-      src: "/images/projects/jungle-island-adventure-golf/template-7-1.jpg",
+      src: `${basePath}/jungle-island-adventure-golf/template-7-1.jpg`,
       altText: "",
       width: 2000,
       height: 1125,
@@ -353,7 +356,7 @@ const projects: Project[] = [
         ],
         images: [
           {
-            src: "/images/projects/jungle-island-adventure-golf/template-6-1.jpg",
+            src: `${basePath}/jungle-island-adventure-golf/template-6-1.jpg`,
             altText: "",
             width: 2000,
             height: 1125,
@@ -369,13 +372,13 @@ const projects: Project[] = [
         ],
         images: [
           {
-            src: "/images/projects/jungle-island-adventure-golf/template-2.jpg",
+            src: `${basePath}/jungle-island-adventure-golf/template-2.jpg`,
             altText: "",
             width: 2000,
             height: 1125,
           },
           {
-            src: "/images/projects/jungle-island-adventure-golf/template-8.jpg",
+            src: `${basePath}/jungle-island-adventure-golf/template-8.jpg`,
             altText: "",
             width: 2000,
             height: 1125,
@@ -407,13 +410,13 @@ const projects: Project[] = [
     summary:
       "A complete site refresh and online theme built with the purpose of reusability across both internal and external facing applications, alongside a new and refreshed line of apparel-based design components.",
     tileImage: {
-      src: "/images/projects/skifocus/tile-image.png",
+      src: `${basePath}/skifocus/tile-image.png`,
       altText: "Ski focus logo",
       width: 1000,
       height: 428,
     },
     image: {
-      src: "/images/projects/skifocus/template-3.jpg",
+      src: `${basePath}/skifocus/template-3.jpg`,
       altText: "",
       width: 2000,
       height: 1125,
@@ -427,13 +430,13 @@ const projects: Project[] = [
         ],
         images: [
           {
-            src: "/images/projects/skifocus/template-2.jpg",
+            src: `${basePath}/skifocus/template-2.jpg`,
             altText: "",
             width: 2000,
             height: 1125,
           },
           {
-            src: "/images/projects/skifocus/template-5.jpg",
+            src: `${basePath}/skifocus/template-5.jpg`,
             altText: "",
             width: 2000,
             height: 1125,
@@ -447,13 +450,13 @@ const projects: Project[] = [
         ],
         images: [
           {
-            src: "/images/projects/skifocus/template-7.jpg",
+            src: `${basePath}/skifocus/template-7.jpg`,
             altText: "",
             width: 2000,
             height: 1125,
           },
           {
-            src: "/images/projects/skifocus/template-6.jpg",
+            src: `${basePath}/skifocus/template-6.jpg`,
             altText: "",
             width: 2000,
             height: 1125,
