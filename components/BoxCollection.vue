@@ -19,6 +19,7 @@
 
 <script setup lang="ts">
   import type { Scrapbook } from "@/types";
+  import { getBaseUrl } from "~/utils/helpers.js";
 
   interface BoxCollection {
     items: Scrapbook[];
@@ -38,7 +39,7 @@
   const lightboxImages = computed<Img[]>(() => {
     return props.items.map((x) => {
       const { src, altText } = x.image;
-      return { src, alt: altText };
+      return { src: `${getBaseUrl()}${src.startsWith("/") ? src.substring(1) : src}`, alt: altText };
     });
   });
 

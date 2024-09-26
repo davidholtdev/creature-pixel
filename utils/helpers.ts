@@ -6,5 +6,6 @@ export const getPageTitle = (value?: string) => {
 };
 
 export const getBaseUrl = () => {
-  return process.env.NODE_ENV === "production" ? "/creature-pixel/" : "/";
+  const config = useRuntimeConfig();
+  return config.public.baseUrl || "/";
 };

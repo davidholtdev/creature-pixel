@@ -1,7 +1,6 @@
-import { getBaseUrl } from "~/utils/helpers";
 import { Project, ProjectTypes } from "@/types";
 
-const basePath: string = `${getBaseUrl()}images/projects`;
+const basePath: string = `/images/projects`;
 
 const projects: Project[] = [
   {
