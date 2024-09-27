@@ -10,6 +10,9 @@ export default defineNuxtConfig({
   app: {
     baseURL: process.env.BASE_URL || "/",
     head: {
+      htmlAttrs: {
+        lang: "en",
+      },
       link: [
         { rel: "icon", type: "image/x-icon", href: `${process.env.BASE_URL || "/"}icons/favicon.ico` },
         { rel: "apple-touch-icon", sizes: "180x180", href: `${process.env.BASE_URL || "/"}icons/apple-touch-icon.png` },

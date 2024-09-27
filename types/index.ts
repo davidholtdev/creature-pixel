@@ -182,6 +182,7 @@ export interface Project {
 
 export interface BaseCard {
   type?: ProjectTypes;
+  tag?: HeadingTagTypes | `${HeadingTagTypes}`;
   image?: Image;
   title: string;
   summary?: string;
