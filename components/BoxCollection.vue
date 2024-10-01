@@ -5,7 +5,7 @@
         <a class="box" @click="openLightbox(index)" role="button">
           <div class="box-image">
             <template v-if="item.tileImage && item.tileImage.src">
-              <NuxtImg :src="item.tileImage.src" :alt="item.tileImage.altText" format="webp" sizes="sm:250px md:221px lg:301px" densities="x1 x2" loading="lazy"></NuxtImg>
+              <NuxtImg :src="item.tileImage.src" :alt="item.tileImage.altText" format="webp" sizes="sm:250px md:221px lg:301px" densities="x1 x2"></NuxtImg>
             </template>
           </div>
         </a>
