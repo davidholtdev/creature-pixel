@@ -11,7 +11,7 @@
         <BoxCollection :items="items" />
       </div>
     </div>
-    <Connect />
+    <Connect tag="h2" />
   </div>
 </template>
 

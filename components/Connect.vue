@@ -1,7 +1,7 @@
 <template>
   <div class="content-section">
     <div class="container container-slim">
-      <HeadingBlock tag="h3" alignment="center" container-size="sm">
+      <HeadingBlock :tag="tag" :alignment="alignment" :container-size="containerSize">
         <template #tagline>Contact</template>
         <template #title>Want to Connect</template>
         <template #description>Got a question or proposal, or just want to say hello? I’ll try my best to get back to you!</template>
@@ -17,6 +17,13 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+  import { HeadingTagTypes, type HeadingBlock } from "~/types";
+  const props = withDefaults(defineProps<HeadingBlock>(), {
+    tag: HeadingTagTypes.H3,
+    alignment: "center",
+    containerSize: "sm",
+  });
+</script>
 
 <style scoped></style>
