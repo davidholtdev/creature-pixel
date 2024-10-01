@@ -13,13 +13,20 @@
     </div>
     <div v-if="project?.image" class="container">
       <div class="image-wrapper">
-        <NuxtImg :src="project.image.src" :width="project.image.width" :height="project.image.height" :alt="project.image.altText" densities="x1 x2"></NuxtImg>
+        <NuxtImg
+          :src="project.image.src"
+          :width="project.image.width"
+          :height="project.image.height"
+          format="webp"
+          sizes="xs: 516px sm:516px md:696px lg:936px xl:1116px xxl:1296px"
+          :alt="project.image.altText"
+          densities="x1 x2"></NuxtImg>
       </div>
     </div>
     <ContentBlock v-if="project?.components && project.components.length" v-for="item in project?.components" v-bind="item" />
     <div v-if="projectCards && projectCards.length" class="content-section">
       <div class="container">
-        <HeadingBlock tag="h1" :alignment="'center'" :container-size="'sm'">
+        <HeadingBlock tag="h3" :alignment="'center'" :container-size="'sm'">
           <template #tagline>Projects</template>
           <template #title>You might also like</template>
         </HeadingBlock>

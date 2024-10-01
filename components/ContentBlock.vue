@@ -10,7 +10,15 @@
   </div>
   <div v-if="images && images.length" class="container">
     <div v-for="image in images" class="image-wrapper">
-      <NuxtImg :src="image.src" :width="image.width" :height="image.height" :alt="image.altText" densities="x1 x2"></NuxtImg>
+      <NuxtImg
+        :src="image.src"
+        :width="image.width"
+        :height="image.height"
+        format="webp"
+        sizes="xs: 516px sm:516px md:696px lg:936px xl:1116px xxl:1296px"
+        :alt="image.altText"
+        densities="x1 x2"
+        loading="lazy"></NuxtImg>
     </div>
   </div>
 </template>
@@ -20,7 +28,6 @@
   const props = defineProps<ContentBlock>();
 
   const combinedContent = computed(() => {
-    // Check if the content is a string, return as is; if array, join with space
     return Array.isArray(props.content) ? props.content.join(" ") : props.content;
   });
 </script>
