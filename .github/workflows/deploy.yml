@@ -1,66 +1,37 @@
+# .github/workflows/deploy.yml
 name: Deploy to GitHub Pages
 
 on:
-  workflow_dispatch:
   push:
     branches:
-      - master # Triggers on push to master
+      - main
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      # Checkout the repository
       - uses: actions/checkout@v4
-
-      # Enable corepack for better package manager support
       - run: corepack enable
-
-      # Set up Node.js
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
-
-      # Install dependencies
-      - run: npm ci
-
-      # Set Base URL for GitHub Pages
-      - name: Set Base URL for GitHub Pages
-        run: echo "BASE_URL=/creature-pixel/" >> $GITHUB_ENV
-
-      # Build the Nuxt project for static generation
-      - run: npx nuxt build --preset github_pages
+      - run: npm install
+      - run: npm run generate
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .output/public
 
   deploy:
     needs: build
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github_pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-
     steps:
-      # Checkout the repository to deploy branch
-      - name: Checkout the repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      # Configure Git identity for the commit
-      - name: Configure Git
-        run: |
-          git config --global user.email "github-actions@github.com"
-          git config --global user.name "GitHub Actions"
-
-      # Deploy the build to the gh-pages branch
-      - name: Deploy to gh-pages
-        run: |
-          # Create a new branch for gh-pages
-          git checkout --orphan gh-pages
-          git reset --hard
-
-          # Copy the output to gh-pages
-          cp -r ./.output/public/* .
-
-          # Add and commit the changes
-          git add -A
-          git commit -m "Deploy to GitHub Pages"
-
-          # Push to gh-pages branch
-          git push --force origin gh-pages
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
