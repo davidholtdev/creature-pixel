@@ -6,6 +6,11 @@ on:
     branches:
       - master
 
+permissions:
+  pages: write
+  id-token: write
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -17,7 +22,6 @@ jobs:
           node-version: "20"
       - run: npm install
       - run: |
-          # Set environment variable and generate static site
           NODE_ENV=production BASE_URL=/creature-pixel/ npm run generate
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
@@ -26,16 +30,14 @@ jobs:
 
   deploy:
     needs: build
+    runs-on: ubuntu-latest
     permissions:
       pages: write
       id-token: write
     environment:
       name: github_pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-        with:
-          branch: gh-pages # Ensuring deployment is done on gh-pages branch
