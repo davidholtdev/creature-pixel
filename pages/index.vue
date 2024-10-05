@@ -39,7 +39,7 @@
             <div class="box box--profile" data-aos="zoom-out" data-aos-delay="300">
               <div class="box-image">
                 <picture>
-                  <NuxtImg src="/images/profile-photo.png" loading="lazy"></NuxtImg>
+                  <NuxtImg src="/images/profile-photo.png" format="webp" alt="David Holt profile photo" width="350" loading="lazy"></NuxtImg>
                 </picture>
               </div>
             </div>
@@ -49,7 +49,7 @@
     </section>
     <div v-if="projectCards && projectCards.length" class="content-section">
       <div class="container">
-        <HeadingBlock tag="h1" :alignment="'center'" :container-size="'sm'">
+        <HeadingBlock tag="h2" :alignment="'center'" :container-size="'sm'">
           <template #tagline>Projects</template>
           <template #title>Some Things I’ve Worked On</template>
         </HeadingBlock>
@@ -67,7 +67,7 @@
     </div>
     <div v-if="scrapbookItems && scrapbookItems.length" class="content-section">
       <div class="container">
-        <HeadingBlock tag="h1" :alignment="'center'" :container-size="'sm'">
+        <HeadingBlock tag="h2" :alignment="'center'" :container-size="'sm'">
           <template #tagline>Scrapbook</template>
           <template #title>I Also Draw, Sometimes</template>
         </HeadingBlock>

@@ -22,7 +22,7 @@
         </div>
       </div>
       <div class="header-widgets">
-        <button id="MenuTrigger" type="button" class="hamburger" @click="toggle" :class="{ active: isOpen }">
+        <button id="MenuTrigger" type="button" :aria-label="isOpen ? 'Close menu' : 'Open menu'" :aria-expanded="isOpen" class="hamburger" @click="toggle" :class="{ active: isOpen }">
           <span class="hamburger-inner">
             <span></span>
           </span>
