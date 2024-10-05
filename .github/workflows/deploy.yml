@@ -16,7 +16,9 @@ jobs:
         with:
           node-version: "20"
       - run: npm install
-      - run: npm run generate
+      - run: |
+          # Set environment variable and generate static site
+          NODE_ENV=production BASE_URL=/creature-pixel/ npm run generate
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
@@ -35,3 +37,5 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          branch: gh-pages # Ensuring deployment is done on gh-pages branch
