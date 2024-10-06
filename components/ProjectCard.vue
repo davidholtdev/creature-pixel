@@ -16,7 +16,7 @@
       </component>
       <p v-if="summary" class="project-card-text">{{ truncateString(summary, 150) }}</p>
       <ul v-if="tags" class="list-inline font-mono fw-bold mb-0 project-card-tags">
-        <li v-for="tag in tags" class="list-inline-item">{{ tag }}</li>
+        <li v-for="(tag, index) in tags" class="list-inline-item">{{ tag }}<span v-if="index !== tags.length - 1">,</span></li>
       </ul>
     </div>
   </article>

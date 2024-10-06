@@ -10,6 +10,7 @@
       <p v-if="hasDescription" class="heading-block-description">
         <slot name="description">{{ description }}</slot>
       </p>
+      <slot></slot>
     </div>
   </div>
 </template>

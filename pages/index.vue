@@ -27,9 +27,9 @@
                 adjusting pixels and organising data.
               </p>
               <p class="font-mono mt-5 mb-2 h6">Core Technologies:</p>
-              <p class="small font-mono">
-                Umbraco CMS, C# ASP.NET MVC, Entity Framework, Azure, NuxtJs, Typescript AngularJs, JavaScript / jQuery, CSS / SCSS, HTML5, Adobe Creative Suite, Affinity Suite
-              </p>
+              <ul v-if="tags && tags.length" class="list-inline font-mono small">
+                <li v-for="(tag, index) in tags" class="list-inline-item me-2">{{ tag }}<span v-if="index !== tags.length - 1">,</span></li>
+              </ul>
               <div class="mt-4 pt-4">
                 <CallToAction :link="{ name: '', url: appRoutes.experience.path }" class="mx-auto">View experience</CallToAction>
               </div>
@@ -90,9 +90,11 @@
 <script setup lang="ts">
   import { getPageTitle } from "@/utils/helpers";
   import { appRoutes } from "@/utils/constants.js";
-  import { type Project, type BaseCard, type Scrapbook } from "@/types";
+  import { type Project, type BaseCard, type Scrapbook, Tags } from "@/types";
 
   const { get: getProjects } = useProjects();
+
+  const tags = ref<string[]>(Object.values(Tags));
 
   const projectItems = ref<Project[]>([]);
 

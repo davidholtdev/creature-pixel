@@ -1,4 +1,4 @@
-import { Project, ProjectTypes } from "@/types";
+import { Project, ProjectTypes, Tags } from "@/types";
 
 const basePath: string = `/images/projects`;
 
@@ -26,7 +26,7 @@ const projects: Project[] = [
       width: 2000,
       height: 1125,
     },
-    tags: ["C# ASP.NET MVC", "Umbraco", "Azure", "jQuery/AngularJs", "Bootstrap/SCSS"],
+    tags: [Tags.UMBRACO_CMS, Tags.C_SHARP_MVC, Tags.AZURE, Tags.ANGULAR_JS, Tags.JAVASCRIPT_JQUERY, Tags.SCSS_CSS],
     components: [
       {
         content: [
@@ -118,7 +118,7 @@ const projects: Project[] = [
       width: 2000,
       height: 1125,
     },
-    tags: ["C# ASP.NET MVC", "Umbraco", "Azure", "jQuery/AngularJs", "Bootstrap/SCSS"],
+    tags: [Tags.UMBRACO_CMS, Tags.C_SHARP_MVC, Tags.AZURE, Tags.ANGULAR_JS, Tags.JAVASCRIPT_JQUERY, Tags.SCSS_CSS],
     components: [
       {
         content: [
@@ -200,7 +200,7 @@ const projects: Project[] = [
       width: 2000,
       height: 1125,
     },
-    tags: ["C# ASP.NET MVC", "Umbraco", "jQuery/AngularJs", "Bootstrap/SCSS"],
+    tags: [Tags.UMBRACO_CMS, Tags.C_SHARP_MVC, Tags.ANGULAR_JS, Tags.JAVASCRIPT_JQUERY, Tags.SCSS_CSS],
     components: [
       {
         content: [
@@ -268,7 +268,7 @@ const projects: Project[] = [
       width: 2000,
       height: 1125,
     },
-    tags: ["C# ASP.NET MVC", "HTML5", "CSS", "Adobe CC"],
+    tags: [Tags.C_SHARP_MVC, Tags.HTML5, Tags.SCSS_CSS, Tags.ADOBE_SUITE],
     components: [
       {
         content: [
@@ -346,7 +346,7 @@ const projects: Project[] = [
       width: 2000,
       height: 1125,
     },
-    tags: ["Adobe CC", "Graphic Design"],
+    tags: [Tags.ADOBE_SUITE, Tags.GRAPHIC_DESIGN],
     components: [
       {
         content: [
@@ -420,7 +420,7 @@ const projects: Project[] = [
       width: 2000,
       height: 1125,
     },
-    tags: ["HTML5", "CSS", "Adobe CC", "Graphic Design"],
+    tags: [Tags.HTML5, Tags.SCSS_CSS, Tags.ADOBE_SUITE, Tags.GRAPHIC_DESIGN],
     components: [
       {
         content: [
