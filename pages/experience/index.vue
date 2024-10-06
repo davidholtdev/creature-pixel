@@ -3,22 +3,19 @@
     <div class="content-section">
       <div class="container container-slim">
         <div class="row">
-          <div class="col order-1 order-sm-0">
+          <div class="col">
             <HeadingBlock tag="h1" title-size="xl" :container-size="'sm'">
               <template #tagline>Experience</template>
               <template #title>David Holt</template>
               <template #description>Web developer, designer and UI/UX engineer</template>
             </HeadingBlock>
           </div>
-          <div class="col-sm-auto order-0 order-sm-1">
-            <div class="box box--profile box--profile-small">
-              <div class="box-image"></div>
-            </div>
-          </div>
         </div>
         <p class="lead">A London-based web developer with over 10 years of experience designing and building digital solutions.</p>
         <p class="font-mono mt-5 mb-2 h6">Core Technologies:</p>
-        <p class="small font-mono">Umbraco CMS, C# ASP.NET MVC, Entity Framework, Azure, NuxtJs, AngularJs, JavaScript / jQuery, CSS / SCSS, HTML5, Adobe Creative Suite, Affinity Suite</p>
+        <ul v-if="tags && tags.length" class="list-inline font-mono small">
+          <li v-for="(tag, index) in tags" class="list-inline-item me-2">{{ tag }}<span v-if="index !== tags.length - 1">,</span></li>
+        </ul>
         <hr class="my-5" />
       </div>
       <div class="container container-slim">
@@ -98,8 +95,11 @@
 </template>
 
 <script setup lang="ts">
+  import { Tags } from "~/types";
   import { getPageTitle } from "@/utils/helpers";
   import { appRoutes } from "@/utils/constants.js";
+
+  const tags = ref<string[]>(Object.values(Tags));
 
   useHead({
     title: getPageTitle(appRoutes.experience.label),

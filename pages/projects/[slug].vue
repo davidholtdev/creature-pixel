@@ -2,12 +2,12 @@
   <div>
     <div class="content-section">
       <div v-if="project?.type || project?.title" class="container container-slim">
-        <HeadingBlock tag="h1" title-size="lg">
+        <HeadingBlock tag="h1" title-size="lg" class="mb-4">
           <template v-if="project?.type" #tagline>{{ project.type }}</template>
           <template v-if="project?.title" #title>{{ project.title }}</template>
         </HeadingBlock>
-        <ul v-if="project.tags && project.tags.length" class="list-inline font-mono">
-          <li v-for="tag in project.tags" class="list-inline-item me-3">{{ tag }}</li>
+        <ul v-if="project.tags && project.tags.length" class="list-inline font-mono small">
+          <li v-for="(tag, index) in project.tags" class="list-inline-item me-3">{{ tag }}<span v-if="index !== project.tags.length - 1">,</span></li>
         </ul>
       </div>
     </div>

@@ -120,19 +120,20 @@ export enum HeadingTagTypes {
 
 export enum Tags {
   UMBRACO_CMS = "Umbraco CMS",
-  NUXT3 = "NuxtJs",
-  ALGOLIA = "Algolia",
-  TYPESCRIPT = "Typescript",
-  NET_CORE = ".NET Core",
   C_SHARP_MVC = "C# ASP.NET MVC",
+  NET_CORE = ".NET Core",
   ENTITY_FRAMEWORK = "Entity Framework",
   AZURE = "Azure",
+  ALGOLIA = "Algolia",
+  NUXT3 = "NuxtJs",
   ANGULAR_JS = "AngularJS",
-  JAVASCRIPT_JQUERY = "JavaScript / jQuery",
+  JAVASCRIPT_JQUERY = "Javascript/jQuery",
+  TYPESCRIPT = "Typescript",
   BOOTSTRAP = "Bootstrap Framework",
-  CSS_SCSS = "CSS / SCSS",
+  SCSS_CSS = "SCSS/SCSS",
   HTML5 = "HTML5",
-  ADOBE_SUITE = "Adobe Creative Suite",
+  GRAPHIC_DESIGN = "Graphic Design",
+  ADOBE_SUITE = "Adobe CC",
   AFFINITY_SUITE = "Affinity Suite",
 }
 
