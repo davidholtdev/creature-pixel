@@ -1,21 +1,21 @@
 <template>
   <header id="Header" class="header">
-    <NuxtLink :to="appRoutes.home.path" class="header-logo">{{ appName }}</NuxtLink>
+    <NuxtLink :to="appRoutes.home.path" @click="handleClick(appRoutes.home.path)" class="header-logo">{{ appName }}</NuxtLink>
     <div class="header-navigation">
       <div id="MenuPlugin" class="header-menu">
         <div class="header-menu-bg"></div>
         <div class="header-menu-main">
-          <NuxtLink :to="appRoutes.home.path" class="header-logo">{{ appName }}</NuxtLink>
+          <NuxtLink :to="appRoutes.home.path" @click="handleClick(appRoutes.home.path)" class="header-logo">{{ appName }}</NuxtLink>
           <nav>
             <ul class="header-nav">
               <li class="header-nav-item">
-                <NuxtLink :to="appRoutes.experience.path">{{ appRoutes.experience.label }}</NuxtLink>
+                <NuxtLink :to="appRoutes.experience.path" @click="handleClick(appRoutes.experience.path)">{{ appRoutes.experience.label }}</NuxtLink>
               </li>
               <li class="header-nav-item">
-                <NuxtLink :to="appRoutes.projects.path">{{ appRoutes.projects.label }}</NuxtLink>
+                <NuxtLink :to="appRoutes.projects.path" @click="handleClick(appRoutes.projects.path)">{{ appRoutes.projects.label }}</NuxtLink>
               </li>
               <li class="header-nav-item">
-                <NuxtLink :to="appRoutes.scrapbook.path">{{ appRoutes.scrapbook.label }}</NuxtLink>
+                <NuxtLink :to="appRoutes.scrapbook.path" @click="handleClick(appRoutes.scrapbook.path)">{{ appRoutes.scrapbook.label }}</NuxtLink>
               </li>
             </ul>
           </nav>
@@ -37,6 +37,7 @@
   import { KeydownKeys, EventListeners } from "@/types";
 
   const router = useRouter();
+  const route = useRoute();
   const isOpen = ref<boolean>(false);
   const isOpenClass = "header--open";
 
@@ -44,14 +45,19 @@
     if (event.key === KeydownKeys.Escape) close();
   };
 
+  const handleClick = (link: string) => {
+    if (route.path === link) close(true);
+  };
+
   const open = () => {
     document.addEventListener(EventListeners.KeyDown, handleKeydownEvent);
     isOpen.value = true;
   };
 
-  const close = () => {
+  const close = (resetScrollPosition?: boolean) => {
     document.removeEventListener(EventListeners.KeyDown, handleKeydownEvent);
     isOpen.value = false;
+    if (resetScrollPosition) window.scrollTo(0, 0);
   };
 
   const toggle = () => {
