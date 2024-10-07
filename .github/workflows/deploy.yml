@@ -22,7 +22,7 @@ jobs:
 
       # Build the Nuxt app with custom BASE_URL
       - run: |
-          NODE_ENV=production BASE_URL=/creature-pixel/ npm run generate
+          NODE_ENV=production npm run generate
 
       # Upload artifact to be deployed to GitHub Pages
       - name: Upload artifact
