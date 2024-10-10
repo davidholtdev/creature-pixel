@@ -9,7 +9,7 @@
     </div>
   </div>
   <div v-if="images && images.length" class="container">
-    <div v-for="image in images" class="image-wrapper">
+    <div v-for="image in images" class="image-wrapper" data-aos="fade-up">
       <NuxtImg
         :src="image.src"
         :width="image.width"

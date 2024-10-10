@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="content-section">
-      <div class="container">
+      <div class="container" data-aos="fade-up">
         <HeadingBlock tag="h1" :alignment="'center'" :container-size="'sm'">
           <template #tagline>Scrapbook</template>
           <template #title>I Also Draw, Sometimes</template>

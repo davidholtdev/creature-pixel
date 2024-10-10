@@ -1,6 +1,8 @@
 <template>
   <div v-if="items && items.length" class="project-card-list">
-    <ProjectCard v-for="item in items" :key="item.title" v-bind="item" />
+    <div v-for="(item, index) in items" :key="item.title" class="project-card-list-item" data-aos="fade-up" :data-aos-delay="100 + index * 100">
+      <ProjectCard v-bind="item" />
+    </div>
   </div>
 </template>
 
