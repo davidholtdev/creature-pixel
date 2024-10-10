@@ -15,6 +15,7 @@
     "@nuxt/image": "^1.8.0",
     "bootstrap": "^5.3.3",
     "nuxt": "^3.13.0",
+    "nuxt-aos": "^1.2.5",
     "vue": "latest",
     "vue-easy-lightbox": "^1.19.0",
     "vue-router": "latest"

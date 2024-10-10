@@ -1,0 +1,63 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: transparent;
+  z-index: 9999;
+  visibility: hidden;
+
+  &:before,
+  &:after {
+    position: fixed;
+    content: "";
+    width: 100vw;
+    height: 100vh;
+    background: var(--header-menu-bg-color, $header-menu-bg-color);
+    transform: translateX(0%) translateY(-100%);
+  }
+
+  &:before {
+    opacity: 0.5;
+  }
+
+  &#{&}-animate-in,
+  &#{&}-animate-out {
+    visibility: visible;
+    &:before,
+    &:after {
+      transition: transform cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
+    }
+  }
+
+  &#{&}-animate-in {
+    &:before,
+    &:after {
+      transform: translateX(0%) translateY(0%);
+    }
+
+    &:after {
+      transition-delay: 0.1s;
+    }
+
+    &:before {
+      transition-delay: 0s;
+    }
+  }
+
+  &#{&}-animate-out {
+    &:before,
+    &:after {
+      transform: translateX(0%) translateY(-100%);
+    }
+
+    &:after {
+      transition-delay: 0;
+    }
+
+    &:before {
+      transition-delay: 0.1s;
+    }
+  }
+}

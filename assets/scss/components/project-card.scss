@@ -14,7 +14,7 @@
 
     @include list-unstyled();
 
-    & > li {
+    & > &-item {
       display: flex;
 
       @media (pointer: fine) {

@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="content-section">
-      <div v-if="project?.type || project?.title" class="container container-slim">
+      <div v-if="project?.type || project?.title" class="container container-slim" data-aos="fade-up">
         <HeadingBlock tag="h1" title-size="lg" class="mb-4">
           <template v-if="project?.type" #tagline>{{ project.type }}</template>
           <template v-if="project?.title" #title>{{ project.title }}</template>
@@ -12,7 +12,7 @@
       </div>
     </div>
     <div v-if="project?.image" class="container">
-      <div class="image-wrapper">
+      <div class="image-wrapper" data-aos="fade-up">
         <NuxtImg
           :src="project.image.src"
           :width="project.image.width"

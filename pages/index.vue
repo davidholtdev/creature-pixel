@@ -2,7 +2,7 @@
   <div>
     <section class="hero">
       <div class="container">
-        <h1 class="hero-title" data-aos="fade-up">
+        <h1 class="hero-title" data-aos="fade-down">
           <span class="font-mono small">Hi! I'm David,</span>
           <span>I build things with code <span class="hero-emoji">&#x1F528;</span></span>
         </h1>
@@ -48,7 +48,7 @@
       </div>
     </section>
     <div v-if="projectCards && projectCards.length" class="content-section">
-      <div class="container">
+      <div class="container" data-aos="fade-up">
         <HeadingBlock tag="h2" :alignment="'center'" :container-size="'sm'">
           <template #tagline>Projects</template>
           <template #title>Some Things I’ve Worked On</template>
@@ -57,7 +57,7 @@
       <div class="container">
         <ProjectCardCollection :items="projectCards" />
       </div>
-      <div v-if="projectsShowMore" class="container mt-5">
+      <div v-if="projectsShowMore" class="container mt-5" data-aos="fade-up">
         <div class="row justify-content-center">
           <div class="col-auto">
             <CallToAction :link="{ name: '', url: appRoutes.projects.path }" class="mx-auto">View more</CallToAction>
@@ -66,7 +66,7 @@
       </div>
     </div>
     <div v-if="scrapbookItems && scrapbookItems.length" class="content-section">
-      <div class="container">
+      <div class="container" data-aos="fade-up">
         <HeadingBlock tag="h2" :alignment="'center'" :container-size="'sm'">
           <template #tagline>Scrapbook</template>
           <template #title>I Also Draw, Sometimes</template>
@@ -75,7 +75,7 @@
       <div class="container container-slim">
         <BoxCollection :items="scrapbookItems" />
       </div>
-      <div v-if="scrapbookShowMore" class="container mt-5">
+      <div v-if="scrapbookShowMore" class="container mt-5" data-aos="fade-up">
         <div class="row justify-content-center">
           <div class="col-auto">
             <CallToAction :link="{ name: '', url: appRoutes.scrapbook.path }" class="mx-auto">View more</CallToAction>

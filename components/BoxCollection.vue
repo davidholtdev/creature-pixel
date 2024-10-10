@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="box-grid">
-      <div v-for="(item, index) in items" :key="index" class="box-grid-item">
+      <div v-for="(item, index) in items" :key="index" class="box-grid-item" data-aos="fade-up" :data-aos-delay="100 + index * 100">
         <a class="box" @click="openLightbox(index)" role="button">
           <div class="box-image">
             <template v-if="item.tileImage && item.tileImage.src">
