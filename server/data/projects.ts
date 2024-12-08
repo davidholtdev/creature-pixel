@@ -156,14 +156,6 @@ const projects: Project[] = [
           "<p>To replicate the majority of the WordPress blog features as close as possible to a .NET environment I had to utilise many different approaches ranging from Lucene/Examine searches, custom routing and route hijacking to the creation of virtual pages for tagging and category searches. This resulted in a fluid user experience that closely matched the pre-existing site but with no dependencies on external sources/libraries.</p>",
           "<p>The blog itself was built from the ground up with optimisation in mind. We wanted to ensure that the overall page-by-page resource sizes were kept as minimal as possible, with extra attention being given to managing DOM size, reducing unnecessary dependencies and image size optimisation. The outcome far exceeded expectations with massive improvements to page speed resulting in consistent scores ranging from 85-100 on mobile and 90-100 on desktop.</p>",
         ],
-        images: [
-          {
-            src: `${basePath}/beyond-travel-blog/template-4.jpg`,
-            altText: "",
-            width: 2000,
-            height: 1125,
-          },
-        ],
       },
       {
         content: [
