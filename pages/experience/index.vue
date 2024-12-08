@@ -16,6 +16,15 @@
         <ul v-if="tags && tags.length" class="list-inline font-mono small">
           <li v-for="(tag, index) in tags" class="list-inline-item me-2">{{ tag }}<span v-if="index !== tags.length - 1">,</span></li>
         </ul>
+        <div class="accolades mt-5">
+          <div>
+            <NuxtImg :src="'/images/accolade-umbraco_expert_certification.png'" :width="120" format="webp" :alt="'Umbraco Expert Certification'" densities="x1 x2"></NuxtImg>
+          </div>
+          <div>
+            <NuxtImg :src="'/images/accolade-mastering-nuxt.png'" :width="120" format="webp" :alt="'Mastering Nuxt Certification'" densities="x1 x2"></NuxtImg>
+          </div>
+        </div>
+
         <hr class="my-5" />
       </div>
       <div class="container container-slim">
@@ -33,18 +42,22 @@
             </div>
             <div class="rte-content">
               <p>
-                I have been with the company for several years, primarily serving as a full-stack developer. In this role, I have been responsible for the company's customer-facing website and its
-                integrated CMS system. My responsibilities have encompassed maintaining the entire codebase, architecting and implementing end-to-end solutions for new features, overseeing databases,
-                API integrations, automation, and more.
+                I joined Newmarket Holidays in 2018 and have seen the company grow and change, much like my own role here. Over the years, I’ve been part of significant projects, including solely
+                managing the previous Umbraco website and now working as part of a team on a modern headless setup with Umbraco backend and Nuxt.js frontend.
               </p>
               <ul>
-                <li class="mb-3">Managed the full end-to-end codebase, including front-end, back-end, database management, APIs, and data layers.</li>
-                <li class="mb-3">Maintained and developed the DevOps workflow, leveraging platforms such as Azure, AWS, and Cloudflare</li>
-                <li class="mb-3">Architected, designed, and implemented a comprehensive NPS solution, featuring back-office management and reporting dashboards.</li>
-                <li class="mb-3">Developed a full end-to-end customer experience solution, integrating custom Azure Blob Storage, back-office management, and reporting dashboards.</li>
-                <li class="mb-3">Integrated several API-driven workflows to enhance automation and data management.</li>
-                <li class="mb-3">Incorporated new workflows into the system's SPA booking journey, including UI/UX workflows, data layer enhancements, and API integrations.</li>
-                <li class="mb-3">Designed and implemented a full end-to-end blog website within the existing CMS.</li>
+                <li class="mb-3">
+                  Full-Stack Development: Managed the complete codebase, encompassing front-end, back-end, database management, APIs, and data layers, ensuring seamless functionality across the
+                  system.
+                </li>
+                <li class="mb-3">
+                  DevOps and Cloud Infrastructure: Maintained and developed the DevOps workflow, leveraging platforms like Azure, AWS, and Cloudflare to enhance deployment and system reliability.
+                </li>
+                <li class="mb-3">
+                  Customer Experience Solutions: Designed and implemented end-to-end solutions, including a comprehensive NPS system and a customer experience platform, both featuring custom Azure
+                  Blob Storage integration, back-office management, and reporting dashboards.
+                </li>
+                <li class="mb-3">Collaborating with stakeholders to align technical solutions with business objectives.</li>
               </ul>
             </div>
           </div>

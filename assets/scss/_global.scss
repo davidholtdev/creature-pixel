@@ -87,3 +87,15 @@
     transition: none !important;
   }
 }
+
+.accolades {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 120px);
+  gap: 1.5rem;
+
+  & img {
+    max-width: 150px;
+    width: 100%;
+    height: auto;
+  }
+}
