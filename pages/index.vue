@@ -7,7 +7,7 @@
           <span>I build things with code <span class="hero-emoji">&#x1F528;</span></span>
         </h1>
         <div class="hero-body">
-          <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="400">I'm a London-based web developer with over 10 years of experience designing and building digital solutions.</p>
+          <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="400">Full-stack developer with a designer’s instinct. Clean code. Thoughtful decisions. No fluff.</p>
         </div>
       </div>
     </section>
@@ -15,16 +15,17 @@
       <div class="container" data-aos="fade-up">
         <HeadingBlock tag="h2" :alignment="'left'" :container-size="'sm'" class="mb-3">
           <template #tagline>Introduction</template>
-          <template #title>About me</template>
+          <template #title>About Me</template>
         </HeadingBlock>
       </div>
       <div class="container">
         <div class="row">
           <div class="col-lg-6">
             <div data-aos="fade-up" data-aos-delay="100">
-              <p class="lead">
-                I started out as a Graphic Designer and Illustrator, but since 2013, I've been pursuing my true passion &mdash; web development. Turns out there is something oddly satisfying about
-                adjusting pixels and organising data.
+              <p><strong>I’m a full-stack developer with a design background, focused on building scalable, maintainable systems that perform well and feel great to use.</strong></p>
+              <p>
+                I design and build modern web applications — from CMS-powered platforms and booking flows to custom APIs and accessible user interfaces. With over a decade of experience, I care about
+                writing code that lasts, works hard, and stays easy to work with.
               </p>
               <p class="font-mono mt-5 mb-2 h6">Core Technologies:</p>
               <ul v-if="tags && tags.length" class="list-inline font-mono small">
@@ -94,7 +95,7 @@
 
   const { get: getProjects } = useProjects();
 
-  const tags = ref<string[]>(Object.values(Tags));
+  const tags = ref<Tags[]>([Tags.NET_CORE, Tags.C_SHARP_MVC, Tags.UMBRACO_CMS, Tags.AZURE, Tags.NUXT3, Tags.TYPESCRIPT, Tags.JAVASCRIPT, Tags.ANGULAR_JS, Tags.SCSS_CSS, Tags.HTML5, Tags.BOOTSTRAP]);
 
   const projectItems = ref<Project[]>([]);
 
