@@ -13,7 +13,10 @@
   },
   "dependencies": {
     "@nuxt/image": "^1.8.0",
+    "@studio-freight/lenis": "^1.0.42",
+    "@vueuse/core": "^13.5.0",
     "bootstrap": "^5.3.3",
+    "gsap": "^3.13.0",
     "nuxt": "^3.13.0",
     "nuxt-aos": "^1.2.5",
     "vue": "latest",
