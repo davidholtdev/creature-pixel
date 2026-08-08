@@ -10,10 +10,9 @@
             </HeadingBlock>
           </div>
         </div>
-        <p class="lead"><strong>Full-stack developer with a design background, focused on building scalable, maintainable systems that perform well and feel great to use.</strong></p>
         <p>
-          I design and build modern web applications — from CMS-powered platforms and booking flows to custom APIs and accessible user interfaces. With over a decade of experience, I care about
-          writing code that lasts, works hard, and stays easy to work with.
+          Full-stack developer with over 13 years of experience designing and building modern web applications, from CMS-powered platforms and booking flows to custom APIs and accessible user
+          interfaces. I care about writing code that lasts, works hard and stays easy to work with.
         </p>
         <p class="font-mono mt-5 mb-2 h6">Core Technologies:</p>
         <ul v-if="tags && tags.length" class="list-inline font-mono small">
@@ -37,7 +36,28 @@
         <div class="resume-list">
           <div class="resume-list-item">
             <div class="d-flex flex-column flex-lg-row justify-content-lg-between mb-4">
-              <div class="order-0 order-lg-1"><span class="font-mono small">Sep 2018 ~ Present</span></div>
+              <div class="order-0 order-lg-1"><span class="font-mono small">Apr 2026 ~ Present</span></div>
+              <div class="order-1 order-lg-0">
+                <h3 class="h4">Codehouse</h3>
+                <p class="text-primary"><strong>Web Developer</strong></p>
+              </div>
+            </div>
+            <div class="rte-content">
+              <p>
+                Working within an agency development team on the modernisation of a large client web platform, migrating an existing Sitecore server-rendered .NET / MVC application to a modern
+                headless architecture using React and Next.js.
+              </p>
+              <ul>
+                <li class="mb-3">Developed and migrated functionality and content from an existing C# / MVC application to a React and Next.js headless implementation.</li>
+                <li class="mb-3">Built reusable React components integrated with a headless CMS using Sitecore JSS.</li>
+                <li class="mb-3">Worked with GraphQL and CMS APIs to retrieve and render structured content.</li>
+                <li class="mb-3">Developed and integrated REST API endpoints supporting functionality within the headless application.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="resume-list-item">
+            <div class="d-flex flex-column flex-lg-row justify-content-lg-between mb-4">
+              <div class="order-0 order-lg-1"><span class="font-mono small">Sep 2018 ~ Apr 2026</span></div>
               <div class="order-1 order-lg-0">
                 <h3 class="h4">Newmarket Holidays</h3>
                 <p class="text-primary"><strong>Web Developer</strong></p>
@@ -45,23 +65,18 @@
             </div>
             <div class="rte-content">
               <p>
-                Worked across two generations of the company’s digital platform — first maintaining and extending a legacy Umbraco 7 MVC site, and now contributing to a modern headless setup built on
-                Umbraco 10, Nuxt, and .NET Core.
+                Full-stack developer responsible for the development and evolution of the company's customer-facing web platform and CMS, working across front-end, back-end, APIs, data and cloud
+                services.
               </p>
               <ul>
-                <li class="mb-3">Developed features across the stack: front-end components, CMS workflows, APIs, and data handling.</li>
                 <li class="mb-3">
-                  Delivered end-to-end solutions including a custom Net Promoter Score (NPS) system and a customer experience platform — both built with Azure Blob Storage and Entity Framework,
-                  featuring back-office management and reporting dashboards.
+                  Managed and developed the full-stack customer-facing web platform, working across C# / ASP.NET MVC, Umbraco CMS, front-end development, databases, APIs, data layers and third-party
+                  integrations.
                 </li>
                 <li class="mb-3">
-                  Led technical enhancements across performance, accessibility, analytics, and automation — including page speed optimisation, Google Analytics data-layer integration, cookie consent
-                  and CMP implementation, and automated content imports from third-party APIs and partner feeds.
+                  Architected and delivered end-to-end features including customer experience tooling, back-office management, reporting dashboards and enhancements to the application's booking flow.
                 </li>
-                <li class="mb-3">
-                  Worked within a modern n-tier architecture using CQRS (with MediatR), Redis caching, and Azure Storage Queues to support scalable data flow and background processing.
-                </li>
-                <li class="mb-3">Collaborated closely with business stakeholders, designers, and QA to align technical solutions with commercial goals.</li>
+                <li class="mb-3">Helped modernise the platform through the adoption of headless CMS architecture, .NET and Vue / Nuxt.</li>
               </ul>
             </div>
           </div>
@@ -75,16 +90,11 @@
                 </div>
               </div>
               <div class="rte-content">
-                <p>
-                  Worked as a front-end developer and sole designer, leading the design and implementation of web applications across multiple projects — blending visual design with hands-on
-                  development to deliver clean, consistent user experiences.
-                </p>
+                <p>Front-end developer and lead designer responsible for the design and implementation of inhouse and client-facing web applications.</p>
                 <ul>
-                  <li class="mb-3">Designed and wireframed responsive UI/UX workflows for internal tools and client-facing platforms — covering both mobile and desktop experiences.</li>
-                  <li class="mb-3">Built and maintained front-end architecture using HTML, CSS, JavaScript, and jQuery — ensuring performance, accessibility, and maintainability.</li>
-                  <li class="mb-3">Partnered with back-end engineers to integrate UI components into fully functional web applications, ensuring consistency across systems.</li>
-                  <li class="mb-3">Led brand and design efforts across internal projects — establishing visual guidelines and creating reusable asset libraries.</li>
-                  <li class="mb-3">Produced a wide range of design collateral, from digital graphics and UI assets to marketing materials, motion graphics, and print-ready assets.</li>
+                  <li class="mb-3">Designed and developed responsive web interfaces using HTML, CSS, JavaScript and jQuery.</li>
+                  <li class="mb-3">Produced UI/UX designs and wireframes, working closely with back-end developers to deliver complete web applications.</li>
+                  <li class="mb-3">Managed visual design and branding across the company's digital products.</li>
                 </ul>
               </div>
             </div>
@@ -123,8 +133,10 @@
     Tags.NET_CORE,
     Tags.C_SHARP_MVC,
     Tags.UMBRACO_CMS,
+    Tags.SITECORE_CMS,
     Tags.AZURE,
     Tags.NUXT3,
+    Tags.NEXT,
     Tags.TYPESCRIPT,
     Tags.JAVASCRIPT,
     Tags.ANGULAR_JS,
