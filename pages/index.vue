@@ -95,7 +95,23 @@
 
   const { get: getProjects } = useProjects();
 
-  const tags = ref<Tags[]>([Tags.NET_CORE, Tags.C_SHARP_MVC, Tags.UMBRACO_CMS, Tags.AZURE, Tags.NUXT3, Tags.TYPESCRIPT, Tags.JAVASCRIPT, Tags.ANGULAR_JS, Tags.SCSS_CSS, Tags.HTML5, Tags.BOOTSTRAP]);
+  const tags = ref<Tags[]>([
+    Tags.NET_CORE,
+    Tags.C_SHARP_MVC,
+    Tags.UMBRACO_CMS,
+    Tags.SITECORE_CMS,
+    Tags.AZURE,
+    Tags.NUXT3,
+    Tags.NEXT,
+    Tags.TYPESCRIPT,
+    Tags.JAVASCRIPT,
+    Tags.ANGULAR_JS,
+    Tags.SCSS_CSS,
+    Tags.HTML5,
+    Tags.BOOTSTRAP,
+    Tags.ALGOLIA,
+    Tags.ADOBE_SUITE,
+  ]);
 
   const projectItems = ref<Project[]>([]);
 
