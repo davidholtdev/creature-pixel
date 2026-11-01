@@ -4,7 +4,7 @@ name: Deploy to GitHub Pages
 on:
   workflow_dispatch:
 
-permissons:
+permissions:
   contents: read
 
 concurrency:
