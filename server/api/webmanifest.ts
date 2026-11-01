@@ -1,7 +1,7 @@
 import { getBaseUrl } from "~/utils/helpers";
 export default defineEventHandler(() => {
   const config = useRuntimeConfig();
-  const baseUrl = config.public.baseUrl || "/";
+  const baseUrl = config.app.baseURL || "/";
   return {
     name: "Creature Pixel",
     short_name: "CreaturePixel",

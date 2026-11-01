@@ -7,9 +7,7 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
-    "predeploy": "cross-env NODE_ENV=production BASE_URL=/creature-pixel/ nuxt generate",
-    "deploy": "gh-pages --dotfiles -d .output/public"
+    "postinstall": "nuxt prepare"
   },
   "dependencies": {
     "@nuxt/image": "^1.8.0",
