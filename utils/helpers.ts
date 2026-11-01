@@ -7,5 +7,5 @@ export const getPageTitle = (value?: string) => {
 
 export const getBaseUrl = () => {
   const config = useRuntimeConfig();
-  return config.public.baseUrl || "/";
+  return config.app.baseURL;
 };
